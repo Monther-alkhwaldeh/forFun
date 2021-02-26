@@ -1,0 +1,170 @@
+*{
+
+}
+body{
+    padding: 0px;
+    margin: 0px;
+    background-image: url("./imgs/BGImg.jpg");
+    background-repeat: repeat-x;
+    background-size: cover;
+}
+/***************************************************header section*************************************************/
+
+.navBar{
+    width: 100%;
+    height: 75px;
+    background-color: #92ddea;
+}
+.logo{
+    width: 3%;
+    padding: 0.5%;
+    position: relative;
+    left: 4%;
+}
+.navBar h1 {
+    position: relative;
+    float: left;
+    left: 15%;
+    top: -5%;
+}
+.animated{
+    animation: spin 3s infinite;
+}
+@keyframes spin{
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(90deg);
+    }
+    50% {
+        transform: rotate(180deg);
+        color: #ffa5d8;
+    }
+    75% {
+        transform: rotate(90deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+.ull{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    float: right;
+    width: 50%;
+    top: 40%;
+}
+.ull li {
+    display: inline;
+    padding: 2%;
+}
+.ull li a{
+    color: black;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+/************************************************sidelinks section*************************************************/
+.icon-bar {
+    position: fixed;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+} 
+.icon-bar a {
+    display: block;
+    text-align: center;
+    padding: 16px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 20px;
+} 
+.icon-bar a:hover {
+    transform: scale(1.2);
+} 
+.facebook {
+    background: #3B5998;
+    color: white;
+}  
+.twitter {
+    background: #55ACEE;
+    color: white;
+} 
+.GitHub {
+    background: #000000;
+    color: white;
+} 
+.linkedin {
+    background: #007bb5;
+    color: white;
+} 
+.youtube {
+    background: #bb0000;
+    color: white;
+}
+/************************************************mainBox section*************************************************/
+.mainBox {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #be9ddfcc;
+    padding: 1%;
+    margin-top: 1%;
+}
+.para{
+    width: 45%;
+    position: relative;
+    left: 1%;
+    line-height: 150%;
+}
+.hImg{
+    width: 45%;
+    position: relative;
+    float: right;
+    top: -300px;
+}
+.hImg img {
+    width: 100%;
+}
+
+.start-btn {
+    width: 15%;
+    text-decoration: none;
+    border: 2px solid #9579d1;
+    background-color: #92ddea;
+    transition: 0.5s ease;
+    font-size: 20px;
+    padding: 5px;
+    position: relative;
+    float: right;
+    top: -90px;
+    right: -450px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+.start-btn:hover{
+    background-color: #9579d1;
+    padding: 15px;
+}
+
+/***************************************************footer section*************************************************/
+.footr {
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    bottom: 0px;
+    background-color: #ffa5d8be;
+    text-align: center;
+    padding-top: 1%;
+}
+
+
+#7eb8da
+#92ddea
+#ffa5d8
+#be9ddf
+#9579d1
