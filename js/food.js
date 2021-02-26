@@ -30,6 +30,5 @@ function renderOrder(){
     liEl.textContent= `Your Order : ${Food.all[i].quantity} of ${Food.all[i].item}`;
 
   }
-
 }
 renderOrder();
