@@ -13,7 +13,8 @@ body{
 .navBar{
     width: 100%;
     height: 75px;
-    background-color: #92ddea;
+    background-color: #9579d1;
+    box-shadow: 0px 0px 10px #3d4446e7;
 }
 .logo{
     width: 3%;
@@ -157,14 +158,15 @@ body{
     height: 50px;
     position: fixed;
     bottom: 0px;
-    background-color: #ffa5d8be;
+    background-color: #92ddeabe;
     text-align: center;
     padding-top: 1%;
+    box-shadow: 0px 0px 10px #3d4446e7;
 }
 
 
-#7eb8da
-#92ddea
-#ffa5d8
-#be9ddf
-#9579d1
+#7eb8da /*dark blue*/
+#92ddea /*light blue*/
+#ffa5d8 /*pink*/
+#be9ddf /*light purple*/
+#9579d1 /*dark purple*/
