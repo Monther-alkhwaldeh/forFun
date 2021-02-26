@@ -90,9 +90,15 @@
 .raw1 div {
 float: left;
 display: inline;
-width: 25%;
+width: 22%;
+height: 22%;
 margin-left: 2.3cm;
-margin-top: 1cm;
+margin-top: 1cm;  
+font-size: large;
+font-family: 'Raleway', sans-serif;
+background-color: hsla(229, 95%, 74%, 0.171);
+padding: 10px;
+box-shadow: 5px 5px 5px #999;
 
 }
 
@@ -101,7 +107,10 @@ margin-top: 1cm;
     height: 200px;
 }
 
-
+.raw1 div p{
+    text-align: center;
+    padding: 10px;
+}
 
 
 
