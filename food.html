@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>food</title>
+    <link rel="stylesheet" href="./css/food.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header class="navBar">
+        <img src="./imgs/logo.png" alt="logo" class="logo" onclick="">
+        <h1>M<span class="animated">oo</span>der</h1>
+        <ul class="ull">
+            <li><a href="./index.html"><i class="fas fa-home"></i> home</a></li>
+            <li class="drop"><a href="./"><i class="fas fa-comments"></i> content</a>
+                <ul class="dropdwn-con">
+                    <li><a href="./"> cooking</a></li>
+                    <li><a href="./"> travling</a></li>
+                    <li><a href="./"> games</a></li>
+                    <li><a href="./"> entertainment</a></li>
+                </ul>
+            </li>
+            <li><a href="./">extra link</a></li>
+            <li><a href="./"><i class="fas fa-percentage"></i> results</a></li>
+            <li><a href="./"><i class="far fa-address-card"></i> about</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <section class="raw1">
+            <div>
+                <img src="./imgs/food1.jpg" alt="">
+                <p>Salmon</p>
+            </div>
+            <div>
+                <img src="./imgs/food2.jpg" alt="">
+                <p>Cinnamon Roll Cheesecake Dip</p>
+            </div>
+            <div>
+                <img src="./imgs/food3.jpg" alt="">
+                <p>Cool Britannia Ice </p>
+            </div>
+        </section>
+
+        <section class="foodCard">
+            <form id="food-Form">
+
+                <fieldset class="fieldset">
+
+                    <label for="item">Item</label>
+                    <select id="item" name="item">
+                        <option value="Salmon">Salmon</option>
+                        <option value="Cheesecake">Cheesecake</option>
+                        <option value="Ice-cream">Ice-cream</option>
+                    </select>
+
+                    <label for="quantity">Quantity</label>
+                    <input type="number" id="quantity">
+
+                    <button type="submit">Submit</button>
+
+                    <section>
+                        <h3>Previous Orders : </h3>
+                        <ul id="orders"></ul>
+                    </section>
+
+
+
+                </fieldset>
+
+
+            </form>
+
+
+        </section>
+
+    </main>
+
+    <footer class="footr" id="footr">
+        this is a footer
+        results can go in here
+    </footer>
+    <script src="./js/food.js"></script>
+
+</body>
+
+</html>
