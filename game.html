@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="./css/reset.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -15,9 +19,9 @@
             <li><a href="./index.html"><i class="fas fa-home"></i> home</a></li>
             <li class="drop"><a href="./"><i class="fas fa-comments"></i> content</a>
                 <ul class="dropdwn-con">
-                    <li><a href="./"> cooking</a></li>
+                    <li><a href="./food.html"> cooking</a></li>
                     <li><a href="./"> travling</a></li>
-                    <li><a href="./"> games</a></li>
+                    <li><a href="./game.html"> games</a></li>
                     <li><a href="./"> entertainment</a></li>
                 </ul>
             </li>
@@ -59,9 +63,29 @@
             <img src="./imgs/game.jpg" alt="hero img">
         </section>
     </section>
-    <section id="game-sec" class="mainBox">
-        <table id="game-table"></table>
+    <section class="mainBox">
+        <section class="" id="about">
+            <h3>what is IQ test?</h3>
+            <p>Lorem ipsum dolor, 
+                sit amet consectetur adipisicing elit. 
+                Voluptates fugit ex excepturi aperiam 
+                provident praesentium enim impedit delectus, 
+                odit velit neque tenetur illum. Quisquam modi 
+                officia alias sequi placeat veniam.
+            </p>
+        </section>
+        <button onclick="swich();" id="playBtn" class="start-btn">play</button>
+        <section id="match-game" hidden>
+            <table id="game-table">
+                <tbody id="tbl-body"></tbody>
+            </table>
+            <button onclick="" id="retryBtn" class="start-btn">retry</button>
+            <button onclick="" id="resBtn" class="start-btn">results</button>
+        </section>
     </section>
+    <!-- <section class="mainBox">
+        <table id="game-table"></table>
+    </section> -->
     <footer class="footr" id="footr">
         this is a footer
         results can go in here
