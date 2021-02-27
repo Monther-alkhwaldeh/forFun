@@ -77,12 +77,12 @@ function renderQuestion() {
     form.appendChild(cc);
     cc.for='ccc';
     cc.textContent=myQuestions[cht].answers.c;
-    
-    }
-    position++;
-    cht++;
+
   }
- 
+  position++;
+  cht++;
+}
+
 console.log(score);
 
 // const aa=document.getElementById('aa').checked;
