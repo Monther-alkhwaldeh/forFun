@@ -8,12 +8,15 @@ const orders = document.getElementById('orders');
 function Food(item, quantity) {
   this.item = item;
   this.quantity = quantity;
+  this.price1=5;
+  this.price2=7;
+  this.price3=9;
 
   Food.all.push(this);
 }
 
 Food.all = [];
-
+console.log(Food.all);
 
 function handelTakeOrder(event) {
   event.preventDefault();
@@ -29,6 +32,8 @@ foodForm.addEventListener('submit', handelTakeOrder);
 
 function renderOrder() {
   const ulEl = document.getElementById('orders');
+  ulEl.innerHTML = ''; //to remove last order
+
   for (let i = 0; i < Food.all.length; i++) {
     const liEl = document.createElement('li');
     ulEl.appendChild(liEl);
@@ -37,3 +42,4 @@ function renderOrder() {
   }
 }
 renderOrder();
+// alert(Food.all[i]*)
