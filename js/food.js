@@ -1,14 +1,6 @@
-
-
-
-
+'use strict';
 const foodForm = document.getElementById('food-Form');
 const orders = document.getElementById('orders');
-
-let preq1 = 0;
-let preq2 = 0;
-let preq3 = 0;
-
 
 function Food(item, quantity) {
   this.item = item;
@@ -44,7 +36,6 @@ function renderOrder() {
       preQuantity +=Food.all[i].quantity;
       liEl.textContent = `Your Order : ${Food.all[i].quantity} of ${Food.all[i].item}`;
       preItem = Food.all[i].item;
-      ulEl.removeChild(ulEl.lastElementChild);
     }else{
       ulEl.removeChild(ulEl.lastElementChild);
       const liEl = document.createElement('li');
@@ -57,36 +48,3 @@ function renderOrder() {
 }
 renderOrder();
 
-
-// function renderOrder() {
-//   const ulEl = document.getElementById('orders');
-//   ulEl.innerHTML = '';
-//   for (let i = 0 ; i < Food.all.length ; i++) {
-//     if (Food.all[i].item === 'Salmon' ) {
-//       console.log(Food.all[i].quantity);
-
-//       preq1+=Food.all[i].quantity;
-//       const liEl = document.createElement('li');
-//       ulEl.appendChild(liEl);
-//       liEl.textContent = `Your Order : ${preq1} of ${Food.all[i].item}`;
-
-//     } else if (Food.all[i].item === 'Cheesecake' ) {
-
-//       preq2 +=Food.all[i].quantity;
-//       const liEl = document.createElement('li');
-//       ulEl.appendChild(liEl);
-//       liEl.textContent = `Your Order : ${preq2} of ${Food.all[i].item}`;
-//     } else if (Food.all[i].item === 'Ice-cream' ) {
-
-//       preq3 +=Food.all[i].quantity;
-//       const liEl = document.createElement('li');
-//       ulEl.appendChild(liEl);
-//       liEl.textContent = `Your Order : ${preq3} of ${Food.all[i].item}`;
-
-//     }
-
-
-//   }
-// }
-/* renderOrder();
- */
