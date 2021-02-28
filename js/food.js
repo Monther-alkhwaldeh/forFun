@@ -1,6 +1,3 @@
-
-
-
 'use strict';
 const foodForm = document.getElementById('food-Form');
 const orders = document.getElementById('orders');
@@ -38,7 +35,7 @@ function renderOrder() {
       preQuantity += Food.all[i].quantity;
       liEl.textContent = `Your Order : ${Food.all[i].quantity} of ${Food.all[i].item}`;
       preItem = Food.all[i].item;
-    } else {
+    }else{
       ulEl.removeChild(ulEl.lastElementChild);
       const liEl = document.createElement('li');
       ulEl.appendChild(liEl);
