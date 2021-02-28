@@ -187,9 +187,73 @@ body{
     box-shadow: 0px 0px 10px #3d4446e7;
 }
 
+/**********************************game styling***********************************************/
+#match-grid {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    padding: 10px;
+    perspective: 600px;
+}
+#match-grid .card-container {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    margin: 10px;
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+#match-grid .card-container > .card_back{
+  transition: box-shadow 0.3s;
+}
+#match-grid .card-container.matched > .card_back{
+  box-shadow: inset 0 0 5px 5px forestgreen;
+}
+/* -------------------quiz section----------------------------- */
+
+.qbox{
+    padding-bottom: 5%;
+}
+.quesBox{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #7eb8dacc;
+    padding: 1%;
+    margin-top: 1%;
+    box-shadow: 0px 0px 5px #3d4446e7;
+    transition: 1s ease;
+}
+.quesBox:hover{
+    box-shadow: inset 0px 0px 10px #3d4446e7;
+}
+
+#qHead{
+    padding: 1%;
+}
+#rad{
+    padding: 2%;
+}
+#radLabl{
+    padding: 1%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*#7eb8da /*dark blue*/
 /*#92ddea /*light blue*/
 /*#ffa5d8 /*pink*/
 /*#be9ddf /*light purple*/
 /*#9579d1 /*dark purple*/
+

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="./css/reset.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header class="navBar">
+        <img src="./imgs/logo.png" alt="logo" class="logo" onclick="">
+        <h1>M<span class="animated">oo</span>der</h1>
+        <ul class="ull">
+            <li><a href="./index.html"><i class="fas fa-home"></i> home</a></li>
+            <li class="drop"><a href="./"><i class="fas fa-comments"></i> content</a>
+                <ul class="dropdwn-con">
+                    <li><a href="./food.html"> cooking</a></li>
+                    <li><a href="./"> travling</a></li>
+                    <li><a href="./game.html"> games</a></li>
+                    <li><a href="./"> entertainment</a></li>
+                </ul>
+            </li>
+            <li><a href="./">extra link</a></li>
+            <li><a href="./"><i class="fas fa-percentage"></i> results</a></li>
+            <li><a href="./"><i class="far fa-address-card"></i> about</a></li>
+        </ul>
+    </header>
+    <section class="icon-bar">
+        <a href="https://web.facebook.com" class="facebook"><i class="fa fa-facebook"></i></a> 
+        <a href="https://twitter.com/" class="twitter"><i class="fa fa-twitter"></i></a> 
+        <a href="https://www.linkedin.com" class="linkedin"><i class="fa fa-linkedin"></i></a>
+        <a href="https://www.youtube.com" class="youtube"><i class="fa fa-youtube"></i></a> 
+    </section>
+    <section class="mainBox">
+        <section class="para">
+            <h2>Paragraph header</h2>
+            <p>Lorem ipsum dolor sit amet,
+                consectetur adipisicing elit.
+                Non odit et sunt minus corporis excepturi, 
+                expedita consequuntur distinctio. 
+                Aut quia ex atque consectetur adipisci 
+                tempore corporis eligendi veniam itaque aliquam.
+                Lorem ipsum dolor sit amet,
+                consectetur adipisicing elit.
+                Non odit et sunt minus corporis excepturi, 
+                expedita consequuntur distinctio. 
+                Aut quia ex atque consectetur adipisci 
+                tempore corporis eligendi veniam itaque aliquam.
+                Lorem ipsum dolor sit amet,
+                consectetur adipisicing elit.
+                Non odit et sunt minus corporis excepturi, 
+                expedita consequuntur distinctio. 
+                Aut quia ex atque consectetur adipisci 
+                tempore corporis eligendi veniam itaque aliquam.
+            </p>
+        </section>
+        <section class="hImg">
+            <img src="./imgs/game.jpg" alt="hero img">
+        </section>
+    </section>
+    <section class="mainBox">
+        <section class="" id="about">
+            <h3>what is IQ test?</h3>
+            <p>Lorem ipsum dolor, 
+                sit amet consectetur adipisicing elit. 
+                Voluptates fugit ex excepturi aperiam 
+                provident praesentium enim impedit delectus, 
+                odit velit neque tenetur illum. Quisquam modi 
+                officia alias sequi placeat veniam.
+            </p>
+        </section>
+        <button onclick="swich();" id="playBtn" class="start-btn">play</button>
+        <div id="match-game" hidden>
+            <!-- <table id="game-table">
+                <tbody id="tbl-body"></tbody>
+            </table> -->
+            <button onclick="" id="retryBtn" class="start-btn">retry</button>
+            <button onclick="" id="resBtn" class="start-btn">results</button>
+        </div>
+    </section>
+    <!-- <section class="mainBox">
+        <table id="game-table"></table>
+    </section> -->
+    <footer class="footr" id="footr">
+        this is a footer
+        results can go in here
+    </footer>
+    <script src="./js/game.js"></script>
+</body>
+</html>
