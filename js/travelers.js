@@ -1,4 +1,6 @@
-// "use strict";
+"use strict";
+
+
 
 function randomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -28,14 +30,14 @@ const names = [
     't20',
     't21',
     't22'
-]
+];
 
 
 
 const leftImage = document.getElementById('left-image');
-const centerImage = document.getElementById('center-img');
+const centerImage = document.getElementById('center-image');
 const rightImage = document.getElementById('right-image');
-const raw1 = document.getElementsByClassName('raw1');
+const imgesction = document.getElementById('imgesction')
 const resultsBtn = document.getElementById('btn');
 
 let laps = 25;
@@ -66,7 +68,6 @@ console.table(Taveler.all);
 
 function render() {
     const leftIndex = randomNumber(0, Taveler.all.length - 1);
-    debugger;
     const centerIndex = randomNumber(leftIndex, Taveler.all.length - 1);
     const rightIndex = randomNumber(0, Taveler.all.length - 1);
     // left imge
@@ -75,7 +76,7 @@ function render() {
     leftImage.alt = Taveler.all[leftIndex].name;
 
     // center imge
-    centerImage.src = Taveler.all[8].path;
+    centerImage.src = Taveler.all[centerIndex].path;
     centerImage.title = Taveler.all[centerIndex].name;
     centerImage.alt = Taveler.all[centerIndex].name;
     // right imge
@@ -95,16 +96,16 @@ function render() {
 
 
 
-raw1[0].addEventListener('click', handleClick);
+imgesction.addEventListener('click', handleClick);
 
 function handleClick(event) {
     laps--;
 
     if (laps === 0) {
-        raw1.removeEventListener('click', handleClick);
+        imgesction.removeEventListener('click', handleClick);
         createChart();
     } else {
-        if (event.target.id !== 'raw1') {
+        if (event.target.id !== 'imgesction') {
             console.log(event.target);
             for (let i = 0; i < Taveler.all.length; i++) {
                 if (Taveler.all[i].name === event.target.title) {
@@ -178,4 +179,4 @@ function resultBtn(event) {
 
 }
 render();
-raw1.addEventListener('click', handleClick);
+imgesction.addEventListener('click', handleClick);
