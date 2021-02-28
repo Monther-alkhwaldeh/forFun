@@ -55,12 +55,94 @@
 
 /* --------------------- form ----------------*/
 .fieldset {
-    position: absolute;
-/*     top: 150%;
- */    left: 32%;
+    
     background-color: #be9ddfcc;
+    width: 70%;
+    margin: auto;
+    align-items: center;
+    padding: 5%;
+    margin-top: 5%;
+    position: relative;
+    top: 50px;
+    left: 10px;
+    margin-bottom: 10%;
+    border: 0px;
+    
+
 
 }
-.fieldset h3 {
-    margin-top: 1em;
+
+
+.btn{
+    background-color: #92ddea;
+	border: 2px solid #9579d1;
+	padding: 10px;
+    width: 20%;
+	color: #141313;
+	font-size: 20px;
+    transition: 1s ease;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer; 
+    border-radius: 5px;
+    position: absolute;
+    left: 75%;
+    bottom: 40px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+} 
+.btn:hover {
+    border: 2px solid #9579d1;
+    font-size: 20px;
+    margin: 5px;
+    color: #2e2e2e;
+	background: #9579d1;
+}
+.fieldset select {
+    background: transparent;
+	border: none;
+	border-bottom: outset #2e2e2e;
+	width: 170px;
+	outline: none;
+	padding-left: 10px;
+	font-size: 20px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;      
+}
+.fieldset input{
+    background: transparent;
+	border: none;
+	border-bottom: outset #2e2e2e;
+	width: 170px;
+	outline: none;
+	padding-left: 10px;
+	font-size: 20px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;     
+}
+.fieldset option{
+    background-color: #92ddea;
+    font-size: large;
+    width: 200%;
+}
+
+.fieldset label{
+    font-size: 20px;
+    
+}
+.option , .number {
+    display: block;
+    padding: 2%;
+}
+#orders{
+    position: absolute;
+    left: 40%;
+    list-style: none;
+    top: 10%;
+    font-size: large;
 }
