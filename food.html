@@ -34,35 +34,56 @@
     </header>
 
     <main>
-        <section class="raw1">
-            <div>
+        <section class="grid-container">
+            <div class="grid-item">
                 <img src="./imgs/food1.jpg" alt="">
-                <p>Salmon</p>
+                <p>Salmon <button type="submit" class="resipeButton" id="resipeButton1" onclick="resipe1.render()">View
+                        Recipe</button></p>
+                <p class="resipePara" id="resipePara1">vndsjnvjdsnvdfjfnvjfnvj </p>
+
             </div>
-            <div>
+            <div class="grid-item">
                 <img src="./imgs/food2.jpg" alt="">
-                <p>Cinnamon Roll Cheesecake Dip</p>
+                <p>Cinnamon Roll Cheesecake Dip <button type="submit" class="resipeButton" id="resipeButton2"
+                        onclick="resipe2.render()">View
+                        Recipe</button></p>
+                <p class="resipePara" id="resipePara2"> vndsjnvjdsnvdfjfnvjfnvj </p>
+
             </div>
-            <div>
+            <div class="grid-item">
                 <img src="./imgs/food3.jpg" alt="">
-                <p>Cool Britannia Ice </p>
-                <h3 class="answer">view answer</h3>
+                <p>Cool Britannia Ice <button type="submit" class="resipeButton" id="resipeButton3"
+                        onclick="resipe3.render()">View
+                        Recipe</button></p>
+                <p class="resipePara" id="resipePara3">vndsjnvjdsnvdfjfnvjfnvj </p>
+
+
             </div>
-        </section>
-        <section class="raw2">
-            <div>
+            <div class="grid-item">
                 <img src="./imgs/food7.jpg" alt="">
-                <p>Salmon</p>
+                <p>Salmon <button type="submit" class="resipeButton" id="resipeButton4" onclick="resipe4.render()">View
+                        Recipe</button></p>
+                <p class="resipePara" id="resipePara4"> vndsjnvjdsnvdfjfnvjfnvj </p>
+
             </div>
-            <div>
+            <div class="grid-item">
                 <img src="./imgs/food5.jpg" alt="">
-                <p>Cinnamon Roll Cheesecake Dip</p>
+                <p>Cinnamon Roll Cheesecake Dip <button type="submit" class="resipeButton" id="resipeButton5"
+                        onclick="resipe5.render()">View
+                        Recipe</button></p>
+                <p class="resipePara" id="resipePara5"> vndsjnvjdsnvdfjfnvjfnvj </p>
+
             </div>
-            <div>
+            <div class="grid-item">
                 <img src="./imgs/food6.jpg" alt="">
-                <p>Cool Britannia Ice </p>
-            </div>
+                <p>Cool Britannia Ice <button type="submit" class="resipeButton" id="resipeButton6"
+                        onclick="resipe6.render()">View
+                        Recipe</button></p>
+                <p class="resipePara" id="resipePara6"> vndsjnvjdsnvdfjfnvjfnvj </p>
+
+            </div class="grid-item">
         </section>
+
 
         <section class="foodCard">
             <form id="food-Form">
@@ -71,9 +92,9 @@
                     <section class="option">
                         <label for="item">Item</label>
                         <select id="item" name="item">
-                        <option value="Salmon">Salmon</option>
-                        <option value="Cheesecake">Cheesecake</option>
-                        <option value="Ice-cream">Ice-cream</option>
+                            <option value="Salmon">Salmon</option>
+                            <option value="Cheesecake">Cheesecake</option>
+                            <option value="Ice-cream">Ice-cream</option>
                         </select>
                     </section>
                     <section class="number">
