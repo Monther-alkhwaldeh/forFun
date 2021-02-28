@@ -3,27 +3,63 @@
     float: left;
     display: inline;
     width: 22%;
-    height: 22%;
-    margin-left: 2.3cm;
-    margin-top: 1cm;  
+    height: 20%;
+    margin-left: 3%;
+    margin-top: 5%;  
     font-size: large;
-    font-family: 'Raleway', sans-serif;
-    background-color: hsla(229, 95%, 74%, 0.678);
-    padding: 10px;
+    background-color: #be9ddfcc;
+    padding: 1%;
     box-shadow: 5px 5px 5px #999;
 }
 .raw1 div img {
-    height: 200px;
+    height: 250px;
+    width: 300px;
 }
 .raw1 div p{
     text-align: center;
-    padding: 10px;
+    padding: 1%;
 }
+
+.raw2 {
+    margin-left: 9%;
+}
+.raw2 div {
+    float: left;
+    display: inline;
+    width: 24.5%;
+    height: 20%;
+    margin-left: 3%;
+    margin-top: 5%;  
+    font-size: large;
+    background-color: #be9ddfcc;
+    padding: 1%;
+    box-shadow: 5px 5px 5px #999;
+ 
+
+}
+.raw2 div img {
+    height: 250px;
+    width: 300px;
+
+    
+        
+    
+}
+
+.raw2 div p {
+ text-align: center;
+ padding: 1%;
+    }
+    
+
+
 /* --------------------- form ----------------*/
 .fieldset {
     position: absolute;
-    top: 11cm;
-    left: 12cm;
+/*     top: 150%;
+ */    left: 32%;
+    background-color: #be9ddfcc;
+
 }
 .fieldset h3 {
     margin-top: 1em;
