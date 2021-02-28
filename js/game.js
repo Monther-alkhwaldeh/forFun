@@ -10,66 +10,61 @@ const imgs = [
 
 const imgPath = './imgs/gameImg/';
 const imgExt = '.png';
-const gameTable = document.getElementById('game-table');
-// const tries = 3;
-// const colms = 4;
-// const rows = (imgs.length/2);
-// const resBtn = document.getElementById('resBtn');
-// const retryBtn = document.getElementById('retryBtn');
-//const saveBtn = document.getElementById('saveBtn');
-// const matches = imgs.length;
+let cardID;
+let cardGuess = [];
+let cardMatched = [];
+
 function swich(){
-  /* switch between the text and the game */
   document.getElementById('about').hidden = true;
   document.getElementById('playBtn').hidden = true;
   document.getElementById('match-game').hidden = false;
   play();
 }
-
 let allImgs = [];
 let shufflImgs = [];
-// let matchImgs = [];
+let finlShuffl = [];
 function play() {
-  // matchImgs = [];
   cardGuess = [];
   cardMatched = [];
-  // const matchAlerts = document.getElementById('match-alerts').hide();
   const matchGame = document.getElementById('match-game');
+  matchGame.style.display = 'none';
   matchGame.innerHTML='';
   allImgs = [];
   shufflImgs = [];
   for (let i = 0; i < 9; i++) {
-    randomizeimgs();
+    randomizeImgs();
   }
   shufflImgs = shuffleArray(allImgs);
   for (let i = 0; i < 18; i++) {
-    let crdSec =
-            '<section class="card-container" id="card-'+i+'"><section class="card card_front"></section><section class="card card_back"><img src='+ imgPath + shufflImgs[i] + imgExt +'></section></section>';
-    matchGame.append(crdSec);
+    const MainGameSec = document.createElement('section');
+    MainGameSec.setAttribute('class', 'card-container');
+    MainGameSec.setAttribute('id', `card-${i}`);
+    matchGame.appendChild(MainGameSec);
+    const fronCard = document.createElement('section');
+    fronCard.setAttribute('class', 'card card_front');
+    MainGameSec.appendChild(fronCard);
+    const backCrd = document.createElement('section');
+    backCrd.setAttribute('class', 'card card_back');
+    MainGameSec.appendChild(backCrd);
+    const imgCrd = document.createElement('img');
+    imgCrd.setAttribute('src', `${imgPath}${shufflImgs[i]}${imgExt}`);
+    imgCrd.title = shufflImgs[i];
+    backCrd.appendChild(imgCrd);
   }
   addFlip();
 }
-function randomizeimgs() {
-  /* get a random image from the list of imgs */
+function randomizeImgs() {
   let randomNum = Math.floor(Math.random() * imgs.length);
-  console.log(randomNum);
   let randomImage = imgs[randomNum];
   for (let i = 0; i < 2; i++) {
     allImgs.push(randomImage);
   }
-  console.log('all imgs', allImgs);
   return allImgs;
 }
-/* flips the card that is clicked */
-let cardID;
-let cardGuess = [];
-let cardMatched = [];
 function addFlip() {
-  let card =document.getElementsByClassName('card-container');
-  /* What happens when a card is clicked */
+  let card = document.getElementsByClassName('card-container');
   for (let i = 0; i < card.length; i++) {
-    card[i].onClick=flip();
-
+    card[i].onClick = flip();
   }
   function flip () {
     this.addClass('is-flipped');
@@ -104,6 +99,13 @@ function checkAnswers(card1, card2) {
     setTimeout(() => alert('Winner winner, turkey dinner!'), 500);
   }
 }
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    finlShuffl.push([ array[i], array[j] ] = [ array[j], array[i] ]);
+  }
+  return finlShuffl;
+}
 // function alertMatch(alertMsg) {
 //   let message = alertMsg;
 //   const matchAlerts= ('#match-alerts').html(message).show();
@@ -112,23 +114,3 @@ function checkAnswers(card1, card2) {
 //   }, 1000);
 // }
 //  Durstenfeld shuffle, a function to shuffle arrays
-function shuffleArray(array) {
-  for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [ array[i], array[j] ] = [ array[j], array[i] ];
-  }
-  return array;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
