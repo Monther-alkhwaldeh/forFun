@@ -29,7 +29,7 @@ function renderOrder() {
       const liEl = document.createElement('li');
       ulEl.appendChild(liEl);
       preQuantity += Food.all[i].quantity;
-      liEl.textContent = `Your Order : ${Food.all[i].quantity} of ${Food.all[i].item}`;
+      liEl.textContent = `Your Order : ${preQuantity} of ${Food.all[i].item}`;
       preItem = Food.all[i].item;
     } else {
       ulEl.removeChild(ulEl.lastElementChild);
@@ -41,4 +41,8 @@ function renderOrder() {
   }
 }
 renderOrder();
+
+
+
+let answers = [s, w, k, f, l, k]
 
