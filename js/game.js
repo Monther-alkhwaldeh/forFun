@@ -20,6 +20,7 @@ class Match {
     }, 500);
     this.closeCard();
     this.timer.innerText = this.timeRemaining;
+    this.victoryTime = this.totalTime - this.timeRemaining;
   }
   startCountdown() {
     return setInterval(() => {

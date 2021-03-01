@@ -92,3 +92,5 @@ let resipe6 = new MyFunction("resipePara6")
 
 retrieve()
 renderOrder();
+
+let x =0;
