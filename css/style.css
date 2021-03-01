@@ -164,7 +164,7 @@ body{
     transition: 0.5s ease;
     font-size: 20px;
     padding: 5px;
-    position: relative;
+    /* position: relative; */
     float: right;
     top: -90px;
     right: -450px;
