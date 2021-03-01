@@ -34,35 +34,107 @@
     </header>
 
     <main>
-        <section class="raw1">
-            <div>
-                <img src="./imgs/food1.jpg" alt="">
-                <p>Salmon</p>
+        <section class="grid-container">
+            <div class="grid-item">
+                <div class="flip-card" >
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="./imgs/food1.jpg" alt="">
+                        </div>
+                        <div class="flip-card-back">
+                            <h1>KOREA</h1>
+                        </div>
+                    </div>
+                </div> 
+            <div class="img-text">
+                <p>Kimbap <button type="submit" class="resipeButton" id="resipeButton1" onclick="resipe1.render()">ViewRecipe</button></p>
+                <p class="resipePara" id="resipePara1">KOREA </p>
             </div>
-            <div>
-                <img src="./imgs/food2.jpg" alt="">
-                <p>Cinnamon Roll Cheesecake Dip</p>
             </div>
-            <div>
-                <img src="./imgs/food3.jpg" alt="">
-                <p>Cool Britannia Ice </p>
-                <h3 class="answer">view answer</h3>
+            <div class="grid-item">
+                <div class="flip-card" >
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="./imgs/food2.jpg" alt="">
+                        </div>
+                        <div class="flip-card-back">
+                            <h1>ITALY</h1>
+                        </div>
+                    </div>
+                </div> 
+            <div class="img-text">
+                <p>Panna Cotta <button type="submit" class="resipeButton" id="resipeButton2"onclick="resipe2.render()">ViewRecipe</button></p>
+                <p class="resipePara" id="resipePara2"> ITALY </p>
             </div>
+                            
+
+            </div>
+            <div class="grid-item">
+                <div class="flip-card" >
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="./imgs/food3.jpg" alt="">
+                        </div>
+                        <div class="flip-card-back">
+                            <h1>JAPAN</h1>
+                        </div>
+                    </div>
+                </div> 
+            <div class="img-text">
+                <p>Yakisoba<button type="submit" class="resipeButton" id="resipeButton3" onclick="resipe3.render()">ViewRecipe</button></p>
+                <p class="resipePara" id="resipePara3">JAPAN</p>
+            </div>
+            </div>
+            <div class="grid-item">
+                <div class="flip-card" >
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="./imgs/food4.jpg" alt="">
+                        </div>
+                        <div class="flip-card-back">
+                            <h1>AMERICA</h1>
+                        </div>
+                    </div>
+                </div>
+            <div class="img-text">
+                <p>Apple Pie <button type="submit" class="resipeButton" id="resipeButton4"onclick="resipe4.render()">ViewRecipe</button></p>
+                <p class="resipePara" id="resipePara4"> AMERICA</p>
+            </div>
+            </div>
+            <div class="grid-item">
+                <div class="flip-card" >
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="./imgs/food5.jpg" alt="">
+                        </div>
+                        <div class="flip-card-back">
+                            <h1>CHINA</h1>
+                        </div>
+                    </div>
+                </div>
+            <div class="img-text">
+                <p>Spring Rolls <button type="submit" class="resipeButton" id="resipeButton5"onclick="resipe5.render()">ViewRecipe</button></p>
+                <p class="resipePara" id="resipePara5"> CHINA </p>
+            </div>
+            </div>
+            <div class="grid-item">
+                <div class="flip-card" >
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="./imgs/food6.jpg" alt="">
+                        </div>
+                        <div class="flip-card-back">
+                            <h1>TURKEY</h1>
+                        </div>
+                    </div>
+                </div>
+            <div class="img-text">
+                <p>Sarma <button type="submit" class="resipeButton" id="resipeButton6" onclick="resipe6.render()">ViewRecipe</button></p>
+                <p class="resipePara" id="resipePara6"> TURKEY </p>
+            </div>
+            </div class="grid-item">
         </section>
-        <section class="raw2">
-            <div>
-                <img src="./imgs/food7.jpg" alt="">
-                <p>Salmon</p>
-            </div>
-            <div>
-                <img src="./imgs/food5.jpg" alt="">
-                <p>Cinnamon Roll Cheesecake Dip</p>
-            </div>
-            <div>
-                <img src="./imgs/food6.jpg" alt="">
-                <p>Cool Britannia Ice </p>
-            </div>
-        </section>
+
 
         <section class="foodCard">
             <form id="food-Form">
@@ -71,15 +143,21 @@
                     <section class="option">
                         <label for="item">Item</label>
                         <select id="item" name="item">
-                        <option value="Salmon">Salmon</option>
-                        <option value="Cheesecake">Cheesecake</option>
-                        <option value="Ice-cream">Ice-cream</option>
+                            <option value="Kimbap">Kimbap</option>
+                            <option value="Panna Cotta">Panna Cotta</option>
+                            <option value="Yakisoba">Yakisoba</option>
+                            <option value="Apple Pie">Apple Pie</option>
+                            <option value="Spring Rolls">Spring Rolls</option>
+                            <option value="Sarma">Sarma</option>
                         </select>
                     </section>
-                    <section class="number">
-                        <label for="quantity">Quantity</label>
-                        <input type="number" id="quantity" required min="1">
+                    <section>
+                          <label for="quantity">Quantity</label>
+                          <input type="number" id="quantity" required min="1">
                     </section>
+                    
+
+                  
 
                     <button type="submit" class="btn">Submit</button>
                     <!-- <button id="remove">remove item</button> -->
