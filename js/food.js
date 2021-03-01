@@ -6,7 +6,20 @@ function Food(item, quantity) {
   this.item = item;
   this.quantity = quantity;
   Food.all.push(this);
+
+  localStorage.setItem("orders", JSON.stringify(Food.all));
+
 }
+
+function retrieve() {
+  if (localStorage.length > 0) {
+    Food.all = JSON.parse(localStorage.getItem("orders"));
+
+    renderOrder();
+  }
+
+}
+
 
 Food.all = [];
 
@@ -35,7 +48,7 @@ function renderOrder() {
       preQuantity += Food.all[i].quantity;
       liEl.textContent = `Your Order : ${Food.all[i].quantity} of ${Food.all[i].item}`;
       preItem = Food.all[i].item;
-    }else{
+    } else {
       ulEl.removeChild(ulEl.lastElementChild);
       const liEl = document.createElement('li');
       ulEl.appendChild(liEl);
@@ -46,9 +59,32 @@ function renderOrder() {
   }
 }
 
+
+function MyFunction(recipe) {
+  this.recipe = recipe
+  this.x = document.getElementById(this.recipe);
+
+}
+
+MyFunction.prototype.render = function () {
+  if (this.x.style.display === "block") {
+    this.x.style.display = "none";
+  } else {
+    this.x.style.display = "block";
+  }
+
+}
+
+
+let resipe1 = new MyFunction("resipePara1")
+let resipe2 = new MyFunction("resipePara2")
+let resipe3 = new MyFunction("resipePara3")
+let resipe4 = new MyFunction("resipePara4")
+let resipe5 = new MyFunction("resipePara5")
+let resipe6 = new MyFunction("resipePara6")
+
+
+
+
+retrieve()
 renderOrder();
-
-
-
-
-

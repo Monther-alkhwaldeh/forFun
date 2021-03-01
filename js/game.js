@@ -13,7 +13,6 @@ class Match {
     this.timeRemaining = this.totalTime;
     this.cardToCheck = null;
     this.busy = true;
-    this.shuffleCards(this.cardsArray);
     setTimeout(() => {
       this.audioController.startMusic();
       this.countdown = this.startCountdown();
@@ -73,15 +72,6 @@ class Match {
       this.busy = false;
     }, 1000);
   }
-  shuffleCards() {
-    debugger;
-    for (let i = this.cardsArray.length-1 ; i > 0 ; i--) {
-      let randomIndex = Math.floor(Math.random() * (i + 1));
-      let randomizre = this.cardsArray[i];
-      this.cardsArray[i]= this.cardsArray[randomIndex];
-      this.cardsArray[randomIndex] = randomizre;
-    }
-  }
 
   getCardType(cards) {
     return cards.getElementsByClassName('card-value')[0].src;
@@ -100,6 +90,15 @@ function ready() {
       game.flipCard(card);
     });
   });
+
+  function shuffleCards() {
+    for (let i = cards.length - 1; i > 0; i--) {
+      let randIndex = Math.floor(Math.random() * (i + 1));
+      cards[randIndex].style.order = i;
+      cards[i].style.order = randIndex;
+    }
+  }
+  shuffleCards();
 }
 
 ready();

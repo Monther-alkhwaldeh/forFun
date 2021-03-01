@@ -1,56 +1,45 @@
-/* ---------------------------main ----------------------------*/
-.raw1 div {
-    float: left;
-    display: inline;
-    width: 22%;
-    height: 20%;
-    margin-left: 3%;
-    margin-top: 5%;  
-    font-size: large;
-    background-color: #be9ddfcc;
-    padding: 1%;
-    box-shadow: 5px 5px 5px #999;
+.resipeButton {
+
+    margin-left: 1.5cm;
+    border: 2px solid black; 
+    padding: 5px;
+
+
 }
-.raw1 div img {
-    height: 250px;
-    width: 300px;
+
+.resipeButton:hover {
+    background-color: #beddbf; 
+    color: black;
+  }
+  
+
+.resipePara {
+    display: none;
 }
-.raw1 div p{
+
+    
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: #2196F3;
+    padding: 10px;
+    margin-right: 10%;
+    margin-top: 3%;
+ margin-left: 8%;
+}
+.grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 13px;
+    font-size: 20px;
     text-align: center;
-    padding: 1%;
+    margin: 15px;
 }
 
-.raw2 {
-    margin-left: 9%;
-}
-.raw2 div {
-    float: left;
-    display: inline;
-    width: 24.5%;
-    height: 20%;
-    margin-left: 3%;
-    margin-top: 5%;  
-    font-size: large;
-    background-color: #be9ddfcc;
-    padding: 1%;
-    box-shadow: 5px 5px 5px #999;
- 
-
-}
-.raw2 div img {
+main img {
     height: 250px;
     width: 300px;
-
-    
-        
-    
 }
-
-.raw2 div p {
- text-align: center;
- padding: 1%;
-    }
-    
 
 
 /* --------------------- form ----------------*/
