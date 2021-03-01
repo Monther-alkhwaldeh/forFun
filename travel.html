@@ -1,63 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Mood converter</title>
-        <link rel="icon" href="./imgs/logo.png" type="image/x-icon" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap" rel="stylesheet">
-        <!-- <link rel="stylesheet" href="./css/reset.css"> -->
-        <link rel="stylesheet" href="./css/style.css">
-        <link rel="stylesheet" href="./css/travel.css">
-    </head>
-    <body>
-        <header class=" navBar ">
-            <img src="./imgs/logo.png " alt="logo " class="logo " onclick=" ">
-            <h1>M<span class="animated ">oo</span>der</h1>
-            <ul class="ull ">
-                <li><a href="./index.html "><i class="fas fa-home "></i> home</a></li>
-                <li class="drop "><a href="./ "><i class="fas fa-comments "></i> content</a>
-                    <ul class="dropdwn-con ">
-                        <li><a href="./cooking.html "> cooking</a></li>
-                        <li><a href="./travel.html "> travling</a></li>
-                        <li><a href="./game.html "> games</a></li>
-                        <!-- <li><a href="./ "> entertainment</a></li> -->
-                    </ul>
-                </li>
-                <li><a href="./ "><i class="fas fa-percentage "></i> results</a></li>
-                <li><a href="./ "><i class="far fa-address-card "></i> about</a></li>
-            </ul>
-        </header>
-        <section class="icon-bar ">
-        <a href="https://web.facebook.com " class="facebook "><i class="fa fa-facebook "></i></a>
-        <a href="https://github.com/four0four-Brain-Not-Found/forFun/" class="gitHub"><i style="font-size:24px" class="fa">&#xf09b;</i></a> 
-        <a href="https://www.linkedin.com " class="linkedin "><i class="fa fa-linkedin "></i></a>
-        </section>
-        <div id="quiz"></div>
-        <button onclick="myclick()" class="start-btn">see where to go</button>
-        <p id="go"></p>
-        <div id="results"></div>
-        <section class="raw1" id="imgesction">
-            <div>
-                <img src="" alt="" id="left-image" style="width:60%">
-                <p></p>
-            </div>
-            <div>
-                <img src="" alt="" id="center-image" style="width:60%">
-                <p></p>
-            </div>
-            <div>
-                <img src="" alt="" id="right-image" style="width:60%">
-                <p></p>
-            </div>
-        </section>
-        <canvas id="myChart"></canvas>
-        <footer class="footr " id="footr ">
-            this is a footer results can go in here
-        </footer>
-        <script src="js/travelers.js"></script>
-    </body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood converter</title>
+    <link rel="icon" href="./imgs/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="./css/reset.css"> -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/travel.css">
+</head>
+
+<body>
+    <header class=" navBar ">
+        <img src="./imgs/logo.png " alt="logo " class="logo " onclick=" ">
+        <h1>M<span class="animated ">oo</span>der</h1>
+        <ul class="ull ">
+            <li><a href="./index.html "><i class="fas fa-home "></i> home</a></li>
+            <li class="drop "><a href="./ "><i class="fas fa-comments "></i> content</a>
+                <ul class="dropdwn-con ">
+                    <li><a href="./ "> cooking</a></li>
+                    <li><a href="./ "> travling</a></li>
+                    <li><a href="./ "> games</a></li>
+                    <li><a href="./ "> entertainment</a></li>
+                </ul>
+            </li>
+            <li><a href="./ ">extra link</a></li>
+            <li><a href="./ "><i class="fas fa-percentage "></i> results</a></li>
+            <li><a href="./ "><i class="far fa-address-card "></i> about</a></li>
+        </ul>
+    </header>
+    <section class="icon-bar "></section>
+    <a href="https://web.facebook.com " class="facebook "><i class="fa fa-facebook "></i></a>
+    <a href="https://twitter.com/ " class="twitter "><i class="fa fa-twitter "></i></a>
+    <a href="https://www.linkedin.com " class="linkedin "><i class="fa fa-linkedin "></i></a>
+    <a href="https://www.youtube.com " class="youtube "><i class="fa fa-youtube "></i></a>
+    </section>
+
+    <div id="quiz"></div>
+    <button onclick="myclick()" class="start-btn">see where to go</button>
+    <p id="go"></p>
+    <div id="results"></div>
+
+    <section class="raw1" id="imgesction">
+        <div>
+            <img src="" alt="" id="left-image" style="width:60%">
+            <p></p>
+        </div>
+        <div>
+            <img src="" alt="" id="center-image" style="width:60%">
+            <p></p>
+        </div>
+        <div>
+            <img src="" alt="" id="right-image" style="width:60%">
+            <p></p>
+        </div>
+
+        <button onclick="resultBtn(event)">see whre to go</button>
+        <p id="here"></p>
+    </section>
+
+
+
+
+    <canvas id="myChart"></canvas>
+
+    <footer class="footr " id="footr ">
+        this is a footer results can go in here
+    </footer>
+    <script src="js/travelers.js"></script>
+</body>
+
 </html>
