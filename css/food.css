@@ -1,55 +1,17 @@
-/* ---------------------------main ----------------------------*/
-/* .raw1 div {
-    float: left;
-    display: inline;
-    width: 22%;
-    height: 20%;
-    margin-left: 3%;
-    margin-top: 5%;  
-    font-size: large;
-    background-color: #be9ddfcc;
-    padding: 1%;
-    box-shadow: 5px 5px 5px #999;
-}
-.raw1 div img {
-    height: 250px;
-    width: 300px;
-}
-.raw1 div p{
-    text-align: center;
-    padding: 1%;
-}
+.resipeButton {
 
-.raw2 {
-    margin-left: 9%;
-}
-.raw2 div {
-    float: left;
-    display: inline;
-    width: 24.5%;
-    height: 20%;
-    margin-left: 3%;
-    margin-top: 5%;  
-    font-size: large;
-    background-color: #be9ddfcc;
-    padding: 1%;
-    box-shadow: 5px 5px 5px #999;
- 
+    margin-left: 1.5cm;
+    border: 2px solid black; 
+    padding: 5px;
+
 
 }
-.raw2 div img {
-    height: 250px;
-    width: 300px;
 
-    
-        
-    
-}
-
-.raw2 div p {
- text-align: center;
- padding: 1%;
-    } */
+.resipeButton:hover {
+    background-color: #beddbf; 
+    color: black;
+  }
+  
 
 .resipePara {
     display: none;

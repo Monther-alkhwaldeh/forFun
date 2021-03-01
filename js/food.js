@@ -6,7 +6,20 @@ function Food(item, quantity) {
   this.item = item;
   this.quantity = quantity;
   Food.all.push(this);
+
+  localStorage.setItem("orders", JSON.stringify(Food.all));
+
 }
+
+function retrieve() {
+  if (localStorage.length > 0) {
+    Food.all = JSON.parse(localStorage.getItem("orders"));
+
+    renderOrder();
+  }
+
+}
+
 
 Food.all = [];
 
@@ -46,13 +59,6 @@ function renderOrder() {
   }
 }
 
-renderOrder();
-
-
-
-
-
-
 
 function MyFunction(recipe) {
   this.recipe = recipe
@@ -80,3 +86,5 @@ let resipe6 = new MyFunction("resipePara6")
 
 
 
+retrieve()
+renderOrder();
