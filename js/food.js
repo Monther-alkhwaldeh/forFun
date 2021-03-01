@@ -6,7 +6,20 @@ function Food(item, quantity) {
   this.item = item;
   this.quantity = quantity;
   Food.all.push(this);
+
+  localStorage.setItem("orders", JSON.stringify(Food.all));
+
 }
+
+function retrieve() {
+  if (localStorage.length > 0) {
+    Food.all = JSON.parse(localStorage.getItem("orders"));
+
+    renderOrder();
+  }
+
+}
+
 
 Food.all = [];
 
@@ -50,31 +63,6 @@ renderOrder();
 
 
 
-// const imgSection = document.getElementById('img-section');
-// // const img=document.createElement('img-section');
-// var img = document.createElement('img');
-// img.src = '../imgs/food3.jpg';
-// imgSection.appendChild(img);
-// // imgSection.appendChild(img);
-// // imgSection.setAttribute('src','./imgs/food1.jpg');
-// // // const img=document.createElement('img');
-// // img.setAttribute('../imgs/food2.jpg');
-// // imgSection.appendChild(img);
-// // // const img =document.createElement('img');
-// // img.setAttribute('../imgs/food3.jpg');
-// // imgSection.appendChild(img);
-// // // const img=document.createElement('img');
-// // img.setAttribute('../imgs/food7.jpg');
-// // imgSection.appendChild(img);
-// // // const img=document.createElement('img');
-// // img.setAttribute('../imgs/food5.jpg');
-// // imgSection.appendChild(img);
-// // // const img=document.createElement('img');
-// // img.setAttribute('../imgs/food6.jpg');
-// // imgSection.appendChild(img);
-
-
-
 
 function MyFunction(recipe) {
   this.recipe = recipe
@@ -102,3 +90,5 @@ let resipe6 = new MyFunction("resipePara6")
 
 
 
+retrieve()
+renderOrder();
