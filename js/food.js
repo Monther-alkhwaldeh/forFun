@@ -6,21 +6,17 @@ function Food(item, quantity) {
   this.item = item;
   this.quantity = quantity;
   Food.all.push(this);
-
-  localStorage.setItem("orders", JSON.stringify(Food.all));
-
+  localStorage.setItem('orders', JSON.stringify(Food.all));
 }
 
 function retrieve() {
   if (localStorage.length > 0) {
-    Food.all = JSON.parse(localStorage.getItem("orders"));
+    Food.all = JSON.parse(localStorage.getItem('orders'));
 
     renderOrder();
   }
 
 }
-
-
 Food.all = [];
 
 function handelTakeOrder(event) {
@@ -29,7 +25,6 @@ function handelTakeOrder(event) {
   const item = event.target.item.value;
   new Food(item, quantity);
   renderOrder();
-
 
 }
 
@@ -65,30 +60,30 @@ renderOrder();
 
 
 function MyFunction(recipe) {
-  this.recipe = recipe
+  this.recipe = recipe;
   this.x = document.getElementById(this.recipe);
 
 }
 
 MyFunction.prototype.render = function () {
-  if (this.x.style.display === "block") {
-    this.x.style.display = "none";
+  if (this.x.style.display === 'block') {
+    this.x.style.display = 'none';
   } else {
-    this.x.style.display = "block";
+    this.x.style.display = 'block';
   }
 
-}
+};
 
 
-let resipe1 = new MyFunction("resipePara1")
-let resipe2 = new MyFunction("resipePara2")
-let resipe3 = new MyFunction("resipePara3")
-let resipe4 = new MyFunction("resipePara4")
-let resipe5 = new MyFunction("resipePara5")
-let resipe6 = new MyFunction("resipePara6")
+let resipe1 = new MyFunction('resipePara1');
+let resipe2 = new MyFunction('resipePara2');
+let resipe3 = new MyFunction('resipePara3');
+let resipe4 = new MyFunction('resipePara4');
+let resipe5 = new MyFunction('resipePara5');
+let resipe6 = new MyFunction('resipePara6');
 
 
 
 
-retrieve()
+retrieve();
 renderOrder();
