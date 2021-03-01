@@ -135,10 +135,16 @@ body {
 .facebook {
     background: #3B5998;
     color: white;
+<<<<<<< HEAD
+}  
+.gitHub {
+    background: #0d0d0e;
+=======
 }
 
 .twitter {
     background: #55ACEE;
+>>>>>>> main
     color: white;
 }
 
@@ -290,12 +296,18 @@ body {
 /*#7eb8da /*dark blue*/
 
 
+<<<<<<< HEAD
+/*#7eb8da /*dark blue*/
+/*#92ddea /*light blue*/
+/*#ffa5d8 /*pink*/
+=======
 /*#92ddea /*light blue*/
 
 
 /*#ffa5d8 /*pink*/
 
 
+>>>>>>> main
 /*#be9ddf /*light purple*/
 
 
