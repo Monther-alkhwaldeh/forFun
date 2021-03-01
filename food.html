@@ -47,8 +47,16 @@
                     </div>
                 </div> 
             <div class="img-text">
-                <p>Kimbap <button type="submit" class="resipeButton" id="resipeButton1" onclick="resipe1.render()">ViewRecipe</button></p>
-                <p class="resipePara" id="resipePara1">KOREA </p>
+                <p>Spring Rolls <button type="submit" class="resipeButton" id="resipeButton1" onclick="resipe1.render()">ViewRecipe</button></p>
+                <ul class="resipePara" id="resipePara1"> 
+                    <li>2 tbsp water</li>
+                    <li>1 tbsp plain flour</li>
+                    <li>1 tsp fine sat</li>
+                    <li>20g mayonnaise</li>
+                    <li>1 tsp sugar</li>
+                    <li>2 to 3 garlic cloves - grated</li>
+                    <li>1 tbsp plain flour</li>
+                </ul>
             </div>
             </div>
             <div class="grid-item">
@@ -64,7 +72,13 @@
                 </div> 
             <div class="img-text">
                 <p>Panna Cotta <button type="submit" class="resipeButton" id="resipeButton2"onclick="resipe2.render()">ViewRecipe</button></p>
-                <p class="resipePara" id="resipePara2"> ITALY </p>
+                <ul class="resipePara" id="resipePara2">
+                <li> 1/4 cup (60 ml) cold water or milk</li>
+                <li> 2 1/4 teaspoons (7 g/0.25 oz.) unflavored powdered gelatin</li>
+                <li>2 cups (480 ml) heavy cream</li>
+                <li>1/4 cup (50 g/1.8 oz.) granulated sugar</li>
+                <li> 1/2 vanilla bean, split and seeded, or 1 teaspoon pure vanilla extract</li>
+                </ul>
             </div>
                             
 
@@ -82,7 +96,15 @@
                 </div> 
             <div class="img-text">
                 <p>Yakisoba<button type="submit" class="resipeButton" id="resipeButton3" onclick="resipe3.render()">ViewRecipe</button></p>
-                <p class="resipePara" id="resipePara3">JAPAN</p>
+                <ul class="resipePara" id="resipePara3">
+                    <li>1 large red bell pepper</li>
+                    <li>1 large carrot</li>
+                    <li>1/2 bunch of green onions</li>
+                    <li>1 lb boneless chicken</li>
+                    <li>1/2 small cabbage head</li>
+                    <li>1/2 large yellow onion</li>
+                    <li>16 oz yakisoba noodles</li>
+                </ul>
             </div>
             </div>
             <div class="grid-item">
@@ -98,7 +120,15 @@
                 </div>
             <div class="img-text">
                 <p>Apple Pie <button type="submit" class="resipeButton" id="resipeButton4"onclick="resipe4.render()">ViewRecipe</button></p>
-                <p class="resipePara" id="resipePara4"> AMERICA</p>
+                <ul class="resipePara" id="resipePara4"> 
+                    <li>cups thinly sliced, peeled apples (6 medium)</li>
+                    <li>3/4 cup sugar</li>
+                    <li>2 tablespoons all-purpose flour</li>
+                    <li>3/4 teaspoon ground cinnamon</li>
+                    <li>1/4 teaspoon salt</li>
+                    <li>1/8 teaspoon ground nutmeg</li>
+                    <li>1 tablespoon lemon juice</li>
+                </ul>
             </div>
             </div>
             <div class="grid-item">
@@ -113,8 +143,14 @@
                     </div>
                 </div>
             <div class="img-text">
-                <p>Spring Rolls <button type="submit" class="resipeButton" id="resipeButton5"onclick="resipe5.render()">ViewRecipe</button></p>
-                <p class="resipePara" id="resipePara5"> CHINA </p>
+                <p>Kimbap <button type="submit" class="resipeButton" id="resipeButton5"onclick="resipe5.render()">ViewRecipe</button></p>
+                <ul class="resipePara" id="resipePara5">
+                    <li>4 dried seaweed sheets (gim / sushi nori)</li>
+                    <li>120g / 4.2 ounces spinach (regular or baby spinach)</li>
+                    <li>2 eggs, beaten</li>
+                    <li>1/2 carrot (120g / 4.2 ounces), julienned.</li>
+                    <li>2 to 4 imitation crab sticks (depending on the length), cut in half length ways</li>
+                </ul>
             </div>
             </div>
             <div class="grid-item">
@@ -130,9 +166,14 @@
                 </div>
             <div class="img-text">
                 <p>Sarma <button type="submit" class="resipeButton" id="resipeButton6" onclick="resipe6.render()">ViewRecipe</button></p>
-                <p class="resipePara" id="resipePara6"> TURKEY </p>
-            </div>
-            </div class="grid-item">
+                <ul class="resipePara" id="resipePara6">
+                <li>1 (3 -to 4-pound) large head cabbage.</li>
+                <li>1 pound ground chuck</li>
+                <li>1/2 pound ground pork.</li>
+                <li>1 cup raw rice, rinsed.</li>
+                <li>1 (8-ounce) can tomato sauce</li>
+                <li>6 smoked ribs or ham hock or other smoked meat</li>
+                </ul>
         </section>
 
 
@@ -151,15 +192,15 @@
                             <option value="Sarma">Sarma</option>
                         </select>
                     </section>
-                    <section>
-                          <label for="quantity">Quantity</label>
-                          <input type="number" id="quantity" required min="1">
-                    </section>
-                    
 
+                    
+                    <section class="number">
+                        <label for="quantity">Quantity</label>
+                        <input type="number" id="quantity" required min="1">
+                    </section>
                   
 
-                    <button type="submit" class="btn">Submit</button>
+                    <button type="submit" class="btn">order</button>
                     <!-- <button id="remove">remove item</button> -->
 
                     <section>
