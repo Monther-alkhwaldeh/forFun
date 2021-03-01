@@ -1,10 +1,11 @@
 'use strict';
 
 class Match {
-  constructor(cards) {
+  constructor( totalTime, cards) {
     this.cardsArray = cards;
+    this.totalTime = totalTime;
+    this.timeRemaining = totalTime;
     this.timer = document.getElementById('time-remaining');
-    this.ticker = document.getElementById('flips');
     this.matchedCards = [];
   }
 
@@ -14,13 +15,11 @@ class Match {
     this.cardToCheck = null;
     this.busy = true;
     setTimeout(() => {
-      this.audioController.startMusic();
       this.countdown = this.startCountdown();
       this.busy = false;
     }, 500);
-    this.hideCards();
+    this.closeCard();
     this.timer.innerText = this.timeRemaining;
-    this.ticker.innerText = this.totalClicks;
   }
   startCountdown() {
     return setInterval(() => {
@@ -30,9 +29,17 @@ class Match {
         this.gameOver();
     }, 1000);
   }
+  gameOver() {
+    clearInterval(this.countdown);
+    document.getElementById('game-over-text').classList.add('visible');
+  }
+  victory() {
+    clearInterval(this.countdown);
+    document.getElementById('victory-text').classList.add('visible');
+  }
 
 
-  hideCards() {
+  closeCard() {
     this.cardsArray.forEach(card => {
       card.classList.remove('visible');
       card.classList.remove('matched');
@@ -81,10 +88,23 @@ class Match {
   }
 }
 
-
 let cards = Array.from(document.getElementsByClassName('card'));
+
+let overlays = Array.from(document.getElementsByClassName('overlay-text'));
+
+
 function ready() {
-  let game = new Match(100, cards);
+  let game = new Match(90, cards);
+
+
+  overlays.forEach(overlay => {
+    overlay.addEventListener('click', () => {
+      overlay.classList.remove('visible');
+      game.startGame();
+    });
+  });
+
+
   cards.forEach(card => {
     card.addEventListener('click', () => {
       game.flipCard(card);

@@ -66,17 +66,23 @@
         </section>
     </section>
     <section class="mainBox">
-        <section class="" id="about">
-            <!-- <h3>what is IQ test?</h3>
-            <p>Lorem ipsum dolor, 
-                sit amet consectetur adipisicing elit. 
-                Voluptates fugit ex excepturi aperiam 
-                provident praesentium enim impedit delectus, 
-                odit velit neque tenetur illum. Quisquam modi 
-                officia alias sequi placeat veniam.
-            </p> -->
-        </section>
-        <!-- <button onclick="swich();" id="playBtn" class="start-btn">play</button> -->
+        <div class="overlay-text visible">
+            Click to Start
+          </div>
+          <div id="game-over-text" class="overlay-text">
+            GAME OVER
+            <span class="overlay-text-small">Click to Restart</span>
+          </div>
+          <div id="victory-text" class="overlay-text">
+            VICTORY
+            <span class="overlay-text-small">Click to Restart</span>
+          </div>
+          <div class="game-container">
+            <div class="game-info-container">
+              <div class="game-info">
+                Time <span id="time-remaining">90</span>
+              </div>
+            </div>
         <div id="match-game" hidden>
             <div class="card">
                 <div class="card-back card-face"></div>

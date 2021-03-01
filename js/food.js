@@ -59,6 +59,10 @@ function renderOrder() {
   }
 }
 
+renderOrder();
+
+
+
 
 function MyFunction(recipe) {
   this.recipe = recipe
