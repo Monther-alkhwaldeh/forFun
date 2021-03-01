@@ -10,6 +10,8 @@ Travelers.prototype.getRndInteger = function(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+const imgesction = document.getElementById('imgesction')
+
 const swim = new Travelers('Bolivia', 'India', 'lake', 'park');
 const camp = new Travelers('switzwrland', 'Norway', 'beren', 'alps');
 const climb = new Travelers('Montana', 'Washington', 'Forde', 'gorgia');
@@ -24,22 +26,20 @@ function Travelers(name, path) {
 }
 
 Travelers.prototype.render = function() {
-        const leftIndex = randomNumber(0, Travelers.swim.length - 1);
-        const centerIndex = randomNumber(0, Travelers.camp.length - 1);
-        const rightIndex = randomNumber(0, Travelers.climb.length - 1);
-        // left imge
-        leftImage.src = Travelers.swim[leftIndex].path;
-        leftImage.title = Travelers.swim[leftIndex].name;
-        leftImage.alt = Travelers.swim[leftIndex].name;
+        const picIndex = randomNumber(0, Travelers.length - 1);
 
-        // center imge
-        centerImage.src = Travelers.camp[centerIndex].path;
-        centerImage.title = Travelers.camp[centerIndex].name;
-        centerImage.alt = Travelers.camp[centerIndex].name;
-        // right imge
-        rightImage.src = Travelers.climb[rightIndex].path;
-        rightImage.title = Travelers.climb[rightIndex].name;
-        rightImage.alt = Travelers.climb[rightIndex].name;
+        // left imge
+        imgesction.src = this.path[picIndex];
+        imgesction.title = this.name[picIndex];
+        imgesction.alt = this.name[picIndex];
+
+        for (i = 0; i < Travelers.length; i++) {
+            const leftImage = document.getElementById('left-image');
+            leftImage.src = Taveler.all[leftIndex].path;
+            leftImage.title = Taveler.all[leftIndex].name;
+            leftImage.alt = Taveler.all[leftIndex].name;
+
+        }
 
     }
     // const names = [
@@ -152,27 +152,27 @@ function handleClick(event) {
         }
     }
 }
-render();
+// render();
 
 
-function resultBtn(event) {
-    for (let i = 0; i < names[i]; i++) {
-        if (this.votes <= 11) {
-            document.getElementById("her").innerHTML = "lets do climping !";
+// function resultBtn(event) {
+//     for (let i = 0; i < names[i]; i++) {
+//         if (this.votes <= 11) {
+//             document.getElementById("her").innerHTML = "lets do climping !";
 
-        } else {
-            document.getElementById("her").innerHTML = "lets swimming !";
-        }
-        render();
-    }
-};
-
-
-
+//         } else {
+//             document.getElementById("her").innerHTML = "lets swimming !";
+//         }
+//         render();
+//     }
+// };
 
 
 
-resultBtn();
+
+
+
+// resultBtn();
 swim.render();
 climb.render();
 camp.render();
