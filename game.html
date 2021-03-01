@@ -10,6 +10,8 @@
     <!-- <link rel="stylesheet" href="./css/reset.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/game.css">
+
 </head>
 <body>
     <header class="navBar">
@@ -64,28 +66,114 @@
         </section>
     </section>
     <section class="mainBox">
-        <section class="" id="about">
-            <h3>what is IQ test?</h3>
-            <p>Lorem ipsum dolor, 
-                sit amet consectetur adipisicing elit. 
-                Voluptates fugit ex excepturi aperiam 
-                provident praesentium enim impedit delectus, 
-                odit velit neque tenetur illum. Quisquam modi 
-                officia alias sequi placeat veniam.
-            </p>
-        </section>
-        <button onclick="swich();" id="playBtn" class="start-btn">play</button>
+        <div class="overlay-text visible">
+            Click to Start
+          </div>
+          <div id="game-over-text" class="overlay-text">
+            GAME OVER
+            <span class="overlay-text-small">Click to Restart</span>
+          </div>
+          <div id="victory-text" class="overlay-text">
+            VICTORY
+            <span class="overlay-text-small">Click to Restart</span>
+          </div>
+          <div class="game-container">
+            <div class="game-info-container">
+              <div class="game-info">
+                Time <span id="time-remaining">90</span>
+              </div>
+            </div>
         <div id="match-game" hidden>
-            <!-- <table id="game-table">
-                <tbody id="tbl-body"></tbody>
-            </table> -->
-            <button onclick="" id="retryBtn" class="start-btn">retry</button>
-            <button onclick="" id="resBtn" class="start-btn">results</button>
+            <div class="card">
+                <div class="card-back card-face"></div>
+                <div class="card-front card-face"><img class="card-value" src="./imgs/gameImg/GImg1.png"></div> 
+            </div>
+            <div class="card">
+                <div class="card-back card-face"></div>
+                <div class="card-front card-face"><img class="card-value" src="./imgs/gameImg/GImg1.png"></div> 
+            </div>
+        
+            <div class="card">
+                <div class="card-back card-face"></div>
+                <div class="card-front card-face"><img class="card-value" src="./imgs/gameImg/GImg2.png"></div> 
+            </div>
+            <div class="card">
+                <div class="card-back card-face"></div>
+                <div class="card-front card-face"><img class="card-value" src="./imgs/gameImg/GImg2.png"></div> 
+            </div>
+            <div class="card">
+                <div class="card-back card-face"></div>
+                <div class="card-front card-face"><img class="card-value" src="./imgs/gameImg/GImg3.png"></div> 
+            </div>
+                <div class="card">
+                <div class="card-back card-face"></div>
+                <div class="card-front card-face"><img class="card-value" src="./imgs/gameImg/GImg3.png"></div> 
+            </div>
+
+            <div class="card">
+                <div class="card-back card-face"></div>
+                <div class="card-front card-face"><img class="card-value" src="./imgs/gameImg/GImg4.png"></div> 
+            </div>
+            <div class="card">
+                <div class="card-back card-face"></div>
+                <div class="card-front card-face"><img class="card-value" src="./imgs/gameImg/GImg4.png"></div> 
+            </div>
+
+            <div class="card">
+                <div class="card-back card-face"></div>
+                <div class="card-front card-face"><img class="card-value" src="./imgs/gameImg/GImg5.png"></div> 
+            </div>
+            <div class="card">
+                <div class="card-back card-face"></div>
+                <div class="card-front card-face"><img class="card-value" src="./imgs/gameImg/GImg5.png"></div> 
+            </div>
+
+            <div class="card">
+               <div class="card-back card-face"></div>
+               <div class="card-front card-face"><img class="card-value" src="./imgs/gameImg/GImg6.png"></div> 
+            </div>
+            <div class="card">
+               <div class="card-back card-face"></div>
+               <div class="card-front card-face"><img class="card-value" src="./imgs/gameImg/GImg6.png"></div> 
+            </div>
+
+            <div class="card">
+               <div class="card-back card-face"></div>
+               <div class="card-front card-face"><img class="card-value" src="./imgs/gameImg/GImg7.png"></div> 
+            </div>
+            <div class="card">
+               <div class="card-back card-face"></div>
+               <div class="card-front card-face"><img class="card-value" src="./imgs/gameImg/GImg7.png"></div> 
+            </div>
+
+            <div class="card">
+               <div class="card-back card-face"></div>
+               <div class="card-front card-face"><img class="card-value" src="./imgs/gameImg/GImg8.png"></div> 
+            </div>
+            <div class="card">
+               <div class="card-back card-face"></div>
+               <div class="card-front card-face"><img class="card-value" src="./imgs/gameImg/GImg8.png"></div>
+            </div>
+
+            <div class="card">
+               <div class="card-back card-face"></div>
+               <div class="card-front card-face"><img class="card-value" src="./imgs/gameImg/GImg9.png"></div>
+            </div>
+            <div class="card">
+               <div class="card-back card-face"></div>
+               <div class="card-front card-face"><img class="card-value" src="./imgs/gameImg/GImg9.png"></div>
+            </div>
+
+            <div class="card">
+               <div class="card-back card-face"></div>
+               <div class="card-front card-face"><img class="card-value" src="./imgs/gameImg/GImg10.png"></div>
+            </div>
+            <div class="card">
+               <div class="card-back card-face"></div>
+               <div class="card-front card-face"><img class="card-value" src="./imgs/gameImg/GImg10.png"></div> 
+            </div>
         </div>
     </section>
-    <!-- <section class="mainBox">
-        <table id="game-table"></table>
-    </section> -->
     <footer class="footr" id="footr">
         this is a footer
         results can go in here
