@@ -1,48 +1,33 @@
 "use strict";
 
 function randomNumber(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
+    return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 
 const swim = ['Bolivia', 'India', 'lake', 'park'];
 const camp = ['switzwrland', 'Norway', 'beren', 'alps'];
 const climb = ['Montana', 'Washington', 'Forde', 'gorgia'];
-<<<<<<< HEAD
-// const allAct = [swim, camp, climb]
-let laps = 12;
-
-
-function Travel (swim,camp,climb){
-  this.swim=swim;
-  this.camp=camp;
-  this.climb=climb;
-  this.vote=0;
-  Travel.all.push(this);
-}
-Travel.all=[];
-
-=======
 const allAct = [swim, camp, climb];
+let votes = 0;
+let Vote = [];
 
 function
-AllPlaces(swim, camp, climb, allAct) {
+AllPlaces(swim, camp, climb, allAct, votes) {
     this.swim = swim;
     this.camp = camp;
     this.climb = climb;
-    // this.votes = 0;
+    this.votes = 0;
     // this.views = 0;
 
     this.allAct = allAct;
-    AllPlaces.all.push(this);
+    ///AllPlaces.all.push(this);
 
 }
 let laps = 12;
-AllPlaces = []
+//AllPlaces = []
 
-
->>>>>>> main
-
+let tmp = new AllPlaces(swim, camp, climb, allAct, votes);
 
 const leftImage = document.getElementById('left-image');
 const centerImage = document.getElementById('center-image');
@@ -51,73 +36,49 @@ const imagesSection = document.getElementById('imagesSection');
 
 
 function render() {
-  const leftIndex = randomNumber(0, swim.length - 1);
-  const centerIndex = randomNumber(0, climb.length - 1);
-  const rightIndex = randomNumber(0, camp.length - 1);
+    const leftIndex = randomNumber(0, swim.length - 1);
+    const centerIndex = randomNumber(0, climb.length - 1);
+    const rightIndex = randomNumber(0, camp.length - 1);
 
-  // left imge
-  leftImage.src = './imgs/travelimg/' + swim[leftIndex] + '.jpg';
-  leftImage.title = swim[leftIndex];
-  leftImage.alt = swim[leftIndex];
+    // left imge
+    leftImage.src = './imgs/travelimg/' + swim[leftIndex] + '.jpg';
+    leftImage.title = swim[leftIndex];
+    leftImage.alt = swim[leftIndex];
 
-  // center imge
-  centerImage.src = './imgs/travelimg/' + camp[centerIndex] + '.jpg';
-  centerImage.title = camp[centerIndex];
-  centerImage.alt = camp[centerIndex];
-  // right imge
-  rightImage.src = './imgs/travelimg/' + climb[rightIndex] + '.jpg';
-  rightImage.title = climb[rightIndex];
-  rightImage.alt = climb[rightIndex];
+    // center imge
+    centerImage.src = './imgs/travelimg/' + camp[centerIndex] + '.jpg';
+    centerImage.title = camp[centerIndex];
+    centerImage.alt = camp[centerIndex];
+    // right imge
+    rightImage.src = './imgs/travelimg/' + climb[rightIndex] + '.jpg';
+    rightImage.title = climb[rightIndex];
+    rightImage.alt = climb[rightIndex];
 
 
-  // if (leftIndex === centerIndex || rightIndex === leftIndex || rightIndex === centerIndex) {
-  //   render()
-  // } else {
-  // }
+    if (leftIndex === centerIndex || rightIndex === leftIndex || rightIndex === centerIndex) {
+        render()
+    }
 
 }
-<<<<<<< HEAD
-
-// let Vote = [];
-=======
-let votes = 0
-let Vote = []
->>>>>>> main
-
-// function updateList() {
-//   let upList = JSON.stringify(Vote);
-//   localStorage.setItem("travelVotes", upList);
-// }
 
 
-// function getList() {
-//   let gList = localStorage.getItem("travelVotes");
-//   if (gList) {
-//     Vote = JSON.parse(gList);
-//     render();
-//   }
-// }
+function updateList() {
+    let upList = JSON.stringify(Vote);
+    localStorage.setItem("travelVotes", upList);
+}
+
+
+function getList() {
+    let gList = localStorage.getItem("travelVotes");
+    if (gList) {
+        Vote = JSON.parse(gList);
+        render();
+    }
+}
 
 imagesSection.addEventListener('click', handleClick);
 
 function handleClick(event) {
-<<<<<<< HEAD
-  laps--;
-  if (laps === 0) {
-    imagesSection.removeEventListener('click', handleClick);
-    // createChart();
-  } else if (event.target.id !== 'images-section') {
-    for (let i = 0; i < Travel.all.length; i++) {
-      if(Travel.all[i].swim===event.target.title || Travel.all[i].camp===event.target.title||Travel.all[i].climb===event.target.title){
-        Travel.all[i].vote++;
-        console.log(Travel.all[i].vote);
-
-      }
-    }
-   
-  } render();
-}
-=======
     laps--;
 
     if (laps === 0) {
@@ -127,32 +88,22 @@ function handleClick(event) {
         if (event.target.id !== 'images-section') {
             console.log(event.target);
 
-
-            console.log(event.target)
-            debugger;
             for (let i = 0; i < allAct.length; i++) {
-                for (let j = 0; j < allAct[i].length; j++) {
-                    if (this.swim === event.target.title || this.climb === event.target.title || this.camp === event.target.title) {
-                        votes++;
-
-                    }
-
-
+                console.log(allAct.length);
+                if (tmp.swim[i] === event.target.title || tmp.climb[i] === event.target.title || tmp.camp[i] === event.target.title) {
+                    tmp.votes++;
+                    console.log("The votes are :" +
+                        tmp.votes);
+                    Vote.push(tmp.votes)
                 }
-                Vote.push(votes)
-
-                render();
-                console.log(votes)
-                console.log(swim, climb, camp);
             }
         }
+        Vote.push(votes)
+        render();
+
+        console.log(Vote)
     }
 }
-render();
-
-console.log(Vote)
-
->>>>>>> main
 imagesSection.addEventListener('click', handleClick);
 render();
 
@@ -200,7 +151,7 @@ render();
 //     let x = document.getElementByid('scal');
 //     x.style.display = 'none';
 // }
-//
+// 
 
 
 
