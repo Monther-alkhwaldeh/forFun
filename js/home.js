@@ -85,17 +85,17 @@ function Test (question, answer1, answer2, answer3, answer4){
     forthlabl.setAttribute('id','radLabl');
     forthlabl.textContent= this.answer4;
     
-    if(frstRadio.checked){
-      this.score+=5;
-    }else if (secRadio.checked){
-      this.score+=3;
-    }else if (thirdRadio.checked){
-      this.score+=2;
-    } else if(forthRadio.checked){
-      this.score+=1;
-    }else {
-      this.score=0;
-    }
+    // if(frstRadio.checked){
+    //   this.score+=5;
+    // }else if (secRadio.checked){
+    //   this.score+=3;
+    // }else if (thirdRadio.checked){
+    //   this.score+=2;
+    // } else if(forthRadio.checked){
+    //   this.score+=1;
+    // }else {
+    //   this.score=0;
+    // }
 
     // const nxtQuestionBtn = document.createElement('button');
     // questionSection.appendChild(nxtQuestionBtn);
