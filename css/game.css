@@ -66,7 +66,7 @@
 }
   
 .game-info {
-    color: #9579d1;
+    color: purple;
     font-size: xx-large;
 }
   
@@ -89,7 +89,7 @@
     justify-content: center;
     align-items: center;
     z-index: 100;
-    color: rgb(5, 71, 8);
+    color: purple;
     font-size: xx-large;
 }
   
@@ -104,7 +104,6 @@
 }
 .para {
     width: 100%;
-    color: purple;
 }
 
 .footr {

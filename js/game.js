@@ -33,10 +33,12 @@ class Match {
   gameOver() {
     clearInterval(this.countdown);
     document.getElementById('game-over-text').classList.add('visible');
+    alert('Game over');
   }
   victory() {
     clearInterval(this.countdown);
     document.getElementById('victory-text').classList.add('visible');
+    alert('VICTORY!!');
   }
   closeCard() {
     this.cardsArray.forEach(card => {
