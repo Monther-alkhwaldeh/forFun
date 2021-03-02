@@ -88,6 +88,8 @@ main img {
     width: 300px;
     height: 250px;
     overflow: scroll;
+/*     list-style: square inside url("../imgs/cooking/food7.png");
+ */
   
 }
 /* --------------------- form ----------------*/
