@@ -12,7 +12,6 @@ class Match {
     this.matchedCards = [];
   }
   startGame() {
-    this.totalClicks = 0;
     this.timeRemaining = this.totalTime;
     this.cardToCheck = null;
     this.busy = true;
@@ -22,7 +21,6 @@ class Match {
     }, 500);
     this.closeCard();
     this.timer.innerText = this.timeRemaining;
-    this.victoryTime = this.totalTime - this.timeRemaining;
   }
   startCountdown() {
     return setInterval(() => {
@@ -35,10 +33,12 @@ class Match {
   gameOver() {
     clearInterval(this.countdown);
     document.getElementById('game-over-text').classList.add('visible');
+    alert('Game over');
   }
   victory() {
     clearInterval(this.countdown);
     document.getElementById('victory-text').classList.add('visible');
+    alert('VICTORY!!');
   }
   closeCard() {
     this.cardsArray.forEach(card => {
