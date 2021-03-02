@@ -1,17 +1,11 @@
-    .raw1 {
-        /* display: block; */
-        margin-right: auto;
-        margin-left: auto;
-    }
-    
-    .content {
-        width: 70%;
-        margin-right: auto;
-        margin-left: auto;
-    }
-    
-    #scal {
-        width: 30%;
-        height: auto;
-        padding: 1%;
-    }
+.column {
+    float: left;
+    /* width: 33.33%; */
+    /* padding: 5px; */
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}

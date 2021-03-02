@@ -1,5 +1,4 @@
 'use strict';
-console.log(localStorage)
 const foodForm = document.getElementById('food-Form');
 const orders = document.getElementById('orders');
 function Food(item, quantity) {
@@ -14,6 +13,7 @@ function retrieve() {
     renderOrder();
   }
 }
+
 Food.all = [];
 function handelTakeOrder(event) {
   event.preventDefault();
@@ -21,6 +21,7 @@ function handelTakeOrder(event) {
   const item = event.target.item.value;
   new Food(item, quantity);
   renderOrder();
+
 }
 foodForm.addEventListener('submit', handelTakeOrder);
 function renderOrder() {
