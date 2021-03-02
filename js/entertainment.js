@@ -42,7 +42,7 @@ function rendervideos() {
   }
 }
 rendervideos();
-
+// -------------audio constructor-----------------------------------
 function AudioC(audioName, aExt) {
   this.audioName = audioName;
   this.path = `./audioclip/${audioName}.${aExt}`;
@@ -52,7 +52,7 @@ AudioC.all = [];
 for (let i = 0; i < audioName.length; i++) {
   new AudioC(audioName[i], aExt[i]);
 }
-
+// ---------audio render---------------------------------
 function audioRender() {
   const h3 = document.createElement('h3');
   audioContainer.appendChild(h3);
@@ -68,6 +68,7 @@ function audioRender() {
 }
 audioRender();
 
+// -------user rate ----constructor----------------------------------
 
 function UserRate(nameU, rateN) {
   this.nameU = nameU;
@@ -76,20 +77,21 @@ function UserRate(nameU, rateN) {
   localStorage.setItem('userrate', JSON.stringify(UserRate.all));
 }
 UserRate.all = [];
-
-function rateRender(){
-  const divC=document.getElementById('userRate');
-  const rateU=document.createElement('ul');
+// --------------rate Render---------------------------
+function rateRender() {
+  const divC = document.getElementById('userRate');
+  const rateU = document.createElement('ul');
   divC.appendChild(rateU);
-  
 
-  for(let i=0;i<UserRate.all.length;i++){
-    rateU.innerHTML='';
-    const rateLi=document.createElement('li');
+
+  for (let i = 0; i < UserRate.all.length; i++) {
+    rateU.innerHTML = '';
+    const rateLi = document.createElement('li');
     rateU.appendChild(rateLi);
-    rateLi.textContent=` Thank You ${UserRate.all[i].nameU} And your rate is : ${UserRate.all[i].rateN}`;
+    rateLi.textContent = ` Thank You ${UserRate.all[i].nameU} And your rate is : ${UserRate.all[i].rateN}`;
   }
 }
+// -----------retrive local storage --------------------------
 function retriverate() {
   if (localStorage > 0) {
     UserRate.all = localStorage.getItem('userrate');
@@ -100,7 +102,7 @@ function retriverate() {
 retriverate();
 
 
-
+// ---------submit button----------------------------------
 
 function submitB(event) {
 
@@ -111,61 +113,9 @@ function submitB(event) {
   event.target.reset();
   rateRender();
 
-  
+
 }
 formp.addEventListener('submit', submitB);
 rateRender();
 
-
-// -------------------------------------
-// const cForm=document.getElementById('contactform');
-// const contactus=document.createElement('h3');
-// cForm.appendChild(contactus);
-// contactus.textContent='Contact Us';
-// const div1=document.createElement('div');
-// cForm.appendChild(div1);
-// const name=document.createElement('input');
-// div1.appendChild(name);
-// name.type='text';
-// name.id='uName';
-// name.placeholder='Enter your Name';
-// const div2=document.createElement('div');
-// cForm.appendChild(div2);
-// const subject=document.createElement('input');
-// div2.appendChild(subject);
-// subject.type='text';
-// subject.id='subject';
-// subject.placeholder='Enter Subject';
-// const div3=document.createElement('div');
-// cForm.appendChild(div3);
-// const phone=document.createElement('input');
-// div3.appendChild(phone);
-// phone.type='text';
-// phone.id='phoneNumber';
-// phone.placeholder='Enter Your Phone Number';
-// const div4=document.createElement('div');
-// cForm.appendChild(div4);
-// const email=document.createElement('input');
-// div4.appendChild(email);
-// email.type='text';
-// email.id='email';
-// email.placeholder='Enter Your Email';
-
-// const div5=document.createElement('div');
-// cForm.appendChild(div5);
-// const message=document.createElement('input');
-// div5.appendChild(message);
-// message.type='text';
-// message.id='message';
-// message.placeholder='Enter Your Message';
-
-// const div6=document.createElement('div');
-// cForm.appendChild(div6);
-
-// const div4=document.createElement('div');
-// cForm.appendChild(div4);
-// const email=document.createElement('input');
-// div4.appendChild(email);
-// phone.id='email';
-// phone.placeholder='Enter Your Email';
 
