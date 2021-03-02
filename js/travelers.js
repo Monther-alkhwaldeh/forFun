@@ -8,17 +8,20 @@ function randomNumber(min, max) {
 const swim = ['Bolivia', 'India', 'lake', 'park'];
 const camp = ['switzwrland', 'Norway', 'beren', 'alps'];
 const climb = ['Montana', 'Washington', 'Forde', 'gorgia'];
-const allAct = [swim, camp, climb]
+// const allAct = [swim, camp, climb]
 let laps = 12;
-let votes = 0;
 
-function Travel(swim,camp,climb){
+
+function Travel (swim,camp,climb){
   this.swim=swim;
   this.camp=camp;
   this.climb=climb;
+  this.vote=0;
   Travel.all.push(this);
 }
 Travel.all=[];
+
+
 
 const leftImage = document.getElementById('left-image');
 const centerImage = document.getElementById('center-image');
@@ -46,60 +49,47 @@ function render() {
   rightImage.alt = climb[rightIndex];
 
 
-  if (leftIndex === centerIndex || rightIndex === leftIndex || rightIndex === centerIndex) {
-    render()
-  } else {
-  }
+  // if (leftIndex === centerIndex || rightIndex === leftIndex || rightIndex === centerIndex) {
+  //   render()
+  // } else {
+  // }
 
 }
 
-let Vote = []
+// let Vote = [];
 
-function updateList() {
-  let upList = JSON.stringify(Vote);
-  localStorage.setItem("travelVotes", upList);
-}
+// function updateList() {
+//   let upList = JSON.stringify(Vote);
+//   localStorage.setItem("travelVotes", upList);
+// }
 
 
-function getList() {
-  let gList = localStorage.getItem("travelVotes");
-  if (gList) {
-    Vote = JSON.parse(gList);
-    render();
-  }
-}
+// function getList() {
+//   let gList = localStorage.getItem("travelVotes");
+//   if (gList) {
+//     Vote = JSON.parse(gList);
+//     render();
+//   }
+// }
 
 imagesSection.addEventListener('click', handleClick);
 
 function handleClick(event) {
   laps--;
-
   if (laps === 0) {
     imagesSection.removeEventListener('click', handleClick);
     // createChart();
   } else if (event.target.id !== 'images-section') {
-    console.log(event.target);
     for (let i = 0; i < Travel.all.length; i++) {
-      if (Travel.all[i].swim === event.target.title) {
-        Travel.all[i].votes++;
-      }else if (Travel.all[i].camp === event.target.title){
-        Travel.all[i].votes++;
-      }else if (Travel.all[i].climb === event.target.title){
-        Travel.all[i].votes++;
+      if(Travel.all[i].swim===event.target.title || Travel.all[i].camp===event.target.title||Travel.all[i].climb===event.target.title){
+        Travel.all[i].vote++;
+        console.log(Travel.all[i].vote);
+
       }
-      console.log(Travel.all.votes);
-      render();
-      console.log(allAct[i][j]);
     }
-  }
-
+   
+  } render();
 }
-render();
-
-
-
-console.log(Vote)
-
 imagesSection.addEventListener('click', handleClick);
 render();
 
@@ -147,7 +137,7 @@ render();
 //     let x = document.getElementByid('scal');
 //     x.style.display = 'none';
 // }
-// 
+//
 
 
 
