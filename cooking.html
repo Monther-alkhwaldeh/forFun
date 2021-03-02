@@ -1,45 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>food</title>
+    <title>cooking</title>
+    <link rel="icon" href="./imgs/logo.png" type="image/x-icon" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/food.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
-
 <body>
     <header class="navBar">
         <img src="./imgs/logo.png" alt="logo" class="logo" onclick="">
         <h1>M<span class="animated">oo</span>der</h1>
         <ul class="ull">
             <li><a href="./index.html"><i class="fas fa-home"></i> home</a></li>
-            <li class="drop"><a href="./"><i class="fas fa-comments"></i> content</a>
+            <li class="drop"><a><i class="fas fa-comments"></i> content</a>
                 <ul class="dropdwn-con">
-                    <li><a href="./food.html"> cooking</a></li>
-                    <li><a href="./"> travling</a></li>
+                    <li><a href="./cooking.html"> cooking</a></li>
+                    <li><a href="./travel.html"> travling</a></li>
                     <li><a href="./game.html"> games</a></li>
-                    <li><a href="./"> entertainment</a></li>
+                    <li><a href="./entertainment.html"> entertainment</a></li>
                 </ul>
             </li>
-            <li><a href="./">extra link</a></li>
-            <li><a href="./"><i class="fas fa-percentage"></i> results</a></li>
+            <!-- <li><a href="./"><i class="fas fa-percentage"></i> results</a></li> -->
             <li><a href="./"><i class="far fa-address-card"></i> about</a></li>
         </ul>
     </header>
-
-    <main>
+    <section class="icon-bar">
+        <a href="https://web.facebook.com" class="facebook"><i class="fa fa-facebook"></i></a>
+        <a href="https://github.com/four0four-Brain-Not-Found/forFun/" class="GitHub"><i style="font-size:24px" class="fa">&#xf09b;</i></a> 
+        <a href="https://www.linkedin.com" class="linkedin"><i class="fa fa-linkedin"></i></a>
+    </section>
+    <section class="mainBox">
+        <section class="para">
+            <h2>Paragraph header</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non odit et sunt minus corporis excepturi,
+                expedita consequuntur distinctio. Aut quia ex atque consectetur adipisci tempore corporis eligendi
+                veniam itaque aliquam. Lorem ipsum dolor
+                sit amet, consectetur adipisicing elit. Non odit et sunt minus corporis excepturi, expedita consequuntur
+                distinctio. Aut quia ex atque consectetur adipisci tempore corporis eligendi veniam itaque aliquam.
+                Lorem ipsum dolor sit amet, consectetur
+                adipisicing elit. Non odit et sunt minus corporis excepturi, expedita consequuntur distinctio. Aut quia
+                ex atque consectetur adipisci tempore corporis eligendi veniam itaque aliquam.
+            </p>
+        </section>
+        <section class="hImg">
+            <img src="./imgs/hImg.jpg" alt="hero img">
+        </section>
+    </section>
+    <main class="mainBox">
         <section class="grid-container">
             <div class="grid-item">
                 <div class="flip-card" >
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
-                            <img src="./imgs/food1.jpg" alt="">
+                            <img src="./imgs/cooking/food1.jpg" alt="">
                         </div>
                         <div class="flip-card-back">
                             <h1>KOREA</h1>
@@ -47,7 +66,8 @@
                     </div>
                 </div> 
             <div class="img-text">
-                <p>Spring Rolls <button type="submit" class="resipeButton" id="resipeButton1" onclick="resipe1.render()">ViewRecipe</button></p>
+                <p>Spring Rolls </p>
+                <button type="submit" class="resipeButton" id="resipeButton1" onclick="resipe1.render()">ViewRecipe</button>
                 <ul class="resipePara" id="resipePara1"> 
                     <li>2 tbsp water</li>
                     <li>1 tbsp plain flour</li>
@@ -63,7 +83,7 @@
                 <div class="flip-card" >
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
-                            <img src="./imgs/food2.jpg" alt="">
+                            <img src="./imgs/cooking/food2.jpg" alt="">
                         </div>
                         <div class="flip-card-back">
                             <h1>ITALY</h1>
@@ -71,7 +91,8 @@
                     </div>
                 </div> 
             <div class="img-text">
-                <p>Panna Cotta <button type="submit" class="resipeButton" id="resipeButton2"onclick="resipe2.render()">ViewRecipe</button></p>
+                <p>Panna Cotta</p>
+                <button type="submit" class="resipeButton" id="resipeButton2"onclick="resipe2.render()">ViewRecipe</button>
                 <ul class="resipePara" id="resipePara2">
                 <li> 1/4 cup (60 ml) cold water or milk</li>
                 <li> 2 1/4 teaspoons (7 g/0.25 oz.) unflavored powdered gelatin</li>
@@ -87,7 +108,7 @@
                 <div class="flip-card" >
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
-                            <img src="./imgs/food3.jpg" alt="">
+                            <img src="./imgs/cooking/food3.jpg" alt="">
                         </div>
                         <div class="flip-card-back">
                             <h1>JAPAN</h1>
@@ -95,7 +116,8 @@
                     </div>
                 </div> 
             <div class="img-text">
-                <p>Yakisoba<button type="submit" class="resipeButton" id="resipeButton3" onclick="resipe3.render()">ViewRecipe</button></p>
+                <p>Yakisoba</p>
+                <button type="submit" class="resipeButton" id="resipeButton3" onclick="resipe3.render()">ViewRecipe</button>
                 <ul class="resipePara" id="resipePara3">
                     <li>1 large red bell pepper</li>
                     <li>1 large carrot</li>
@@ -111,7 +133,7 @@
                 <div class="flip-card" >
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
-                            <img src="./imgs/food4.jpg" alt="">
+                            <img src="./imgs/cooking/food4.jpg" alt="">
                         </div>
                         <div class="flip-card-back">
                             <h1>AMERICA</h1>
@@ -119,7 +141,8 @@
                     </div>
                 </div>
             <div class="img-text">
-                <p>Apple Pie <button type="submit" class="resipeButton" id="resipeButton4"onclick="resipe4.render()">ViewRecipe</button></p>
+                <p>Apple Pie</p>
+                <button type="submit" class="resipeButton" id="resipeButton4"onclick="resipe4.render()">ViewRecipe</button>
                 <ul class="resipePara" id="resipePara4"> 
                     <li>cups thinly sliced, peeled apples (6 medium)</li>
                     <li>3/4 cup sugar</li>
@@ -135,7 +158,7 @@
                 <div class="flip-card" >
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
-                            <img src="./imgs/food5.jpg" alt="">
+                            <img src="./imgs/cooking/food5.jpg" alt="">
                         </div>
                         <div class="flip-card-back">
                             <h1>CHINA</h1>
@@ -143,7 +166,8 @@
                     </div>
                 </div>
             <div class="img-text">
-                <p>Kimbap <button type="submit" class="resipeButton" id="resipeButton5"onclick="resipe5.render()">ViewRecipe</button></p>
+                <p>Kimbap</p>
+                <button type="submit" class="resipeButton" id="resipeButton5"onclick="resipe5.render()">ViewRecipe</button>
                 <ul class="resipePara" id="resipePara5">
                     <li>4 dried seaweed sheets (gim / sushi nori)</li>
                     <li>120g / 4.2 ounces spinach (regular or baby spinach)</li>
@@ -157,33 +181,34 @@
                 <div class="flip-card" >
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
-                            <img src="./imgs/food6.jpg" alt="">
+                            <img src="./imgs/cooking/food6.jpg" alt="">
                         </div>
                         <div class="flip-card-back">
                             <h1>TURKEY</h1>
                         </div>
                     </div>
                 </div>
-            <div class="img-text">
-                <p>Sarma <button type="submit" class="resipeButton" id="resipeButton6" onclick="resipe6.render()">ViewRecipe</button></p>
-                <ul class="resipePara" id="resipePara6">
-                <li>1 (3 -to 4-pound) large head cabbage.</li>
-                <li>1 pound ground chuck</li>
-                <li>1/2 pound ground pork.</li>
-                <li>1 cup raw rice, rinsed.</li>
-                <li>1 (8-ounce) can tomato sauce</li>
-                <li>6 smoked ribs or ham hock or other smoked meat</li>
-                </ul>
+                <div class="img-text">
+                    <p>Sarma</p>
+                    <button type="submit" class="resipeButton" id="resipeButton6" onclick="resipe6.render()">ViewRecipe</button>
+                    <ul class="resipePara" id="resipePara6">
+                    <li>1 (3 -to 4-pound) large head cabbage.</li>
+                    <li>1 pound ground chuck</li>
+                    <li>1/2 pound ground pork.</li>
+                    <li>1 cup raw rice, rinsed.</li>
+                    <li>1 (8-ounce) can tomato sauce</li>
+                    <li>6 smoked ribs or ham hock or other smoked meat</li>
+                    </ul>
+                </div>
+            </div>
         </section>
-
-
         <section class="foodCard">
             <form id="food-Form">
-
                 <fieldset class="fieldset">
                     <section class="option">
                         <label for="item">Item</label>
                         <select id="item" name="item">
+                            <option value=""></option>
                             <option value="Kimbap">Kimbap</option>
                             <option value="Panna Cotta">Panna Cotta</option>
                             <option value="Yakisoba">Yakisoba</option>
@@ -192,39 +217,23 @@
                             <option value="Sarma">Sarma</option>
                         </select>
                     </section>
-
-                    
                     <section class="number">
                         <label for="quantity">Quantity</label>
                         <input type="number" id="quantity" required min="1">
                     </section>
-                  
-
                     <button type="submit" class="btn">order</button>
                     <!-- <button id="remove">remove item</button> -->
-
                     <section>
                         <ul id='orders'></ul>
                     </section>
-
-
-
                 </fieldset>
-
-
             </form>
-
-
         </section>
-
     </main>
-
     <footer class="footr" id="footr">
         this is a footer
         results can go in here
     </footer>
-    <script src="./js/food.js"></script>
-
 </body>
-
+<script src="./js/food.js"></script>
 </html>

@@ -1,5 +1,8 @@
 'use strict';
 
+let cards = Array.from(document.getElementsByClassName('card'));
+let overlays = Array.from(document.getElementsByClassName('overlay-text'));
+
 class Match {
   constructor( totalTime, cards) {
     this.cardsArray = cards;
@@ -8,7 +11,6 @@ class Match {
     this.timer = document.getElementById('time-remaining');
     this.matchedCards = [];
   }
-
   startGame() {
     this.totalClicks = 0;
     this.timeRemaining = this.totalTime;
@@ -38,8 +40,6 @@ class Match {
     clearInterval(this.countdown);
     document.getElementById('victory-text').classList.add('visible');
   }
-
-
   closeCard() {
     this.cardsArray.forEach(card => {
       card.classList.remove('visible');
@@ -80,7 +80,6 @@ class Match {
       this.busy = false;
     }, 1000);
   }
-
   getCardType(cards) {
     return cards.getElementsByClassName('card-value')[0].src;
   }
@@ -89,23 +88,14 @@ class Match {
   }
 }
 
-let cards = Array.from(document.getElementsByClassName('card'));
-
-let overlays = Array.from(document.getElementsByClassName('overlay-text'));
-
-
 function ready() {
   let game = new Match(90, cards);
-
-
   overlays.forEach(overlay => {
     overlay.addEventListener('click', () => {
       overlay.classList.remove('visible');
       game.startGame();
     });
   });
-
-
   cards.forEach(card => {
     card.addEventListener('click', () => {
       game.flipCard(card);
@@ -121,7 +111,4 @@ function ready() {
   }
   shuffleCards();
 }
-
 ready();
-
-

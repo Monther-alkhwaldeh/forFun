@@ -1,46 +1,27 @@
-.resipeButton {
-
-    margin-left: 1.5cm;
-    border: 2px solid black; 
-    padding: 5px;
-
-
-}
-
-.resipeButton:hover {
-    background-color: #beddbf; 
-    color: black;
-  }
-  
-
-.resipePara {
-    display: none;
-}
-
-    
 .grid-container {
     display: grid;
     grid-template-columns: auto auto auto;
-    background-color: #2196F3;
-    padding: 10px;
-    margin-right: 10%;
-    margin-top: 3%;
- margin-left: 8%;
+    width: 100%;
+    margin-top: 2%;
 }
 .grid-item {
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(0, 0, 0, 0.8);
+    background-color: #80c2b498;
+    border: 1px solid #3b3d3de7;
     padding: 13px;
     font-size: 20px;
     text-align: center;
     margin: 15px;
-  
+    transition: all 0.3s ease;
+    height: 400px;
+}
+.grid-item:hover{
+    box-shadow: 0px 0px 5px #3b3d3de7;
+    transform: scale(1.05);
 }
 .flip-card{
     background-color: transparent;
-    width: 300px;
-    height: 200px;
-    border: 1px solid #f1f1f1;
+    width: 100%;
+    height: 50%;
     perspective: 1000px;
 }
 .flip-card-inner {
@@ -50,87 +31,93 @@
     text-align: center;
     transition: transform 0.8s;
     transform-style: preserve-3d;
-  }
-  .flip-card:hover .flip-card-inner {
+}
+.flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
-  } 
-  
-  /* Position the front and back side */
-  .flip-card-front, .flip-card-back {
+}
+.flip-card-front, .flip-card-back {
     position: absolute;
     width: 100%;
     height: 100%;
-    -webkit-backface-visibility: hidden; /* Safari */
-backface-visibility: hidden;
-  } 
-  
-  /* Style the front side (fallback if image is missing) */
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
 .flip-card-front {
     background-color: #bbb;
     color: black;
-  } 
-  
-  /* Style the back side */
-  .flip-card-back {
-    background-color: dodgerblue;
-    color: white;
+}
+.flip-card-back {
+    background-color: #80c2b4d2;
+    color: #08282f;
     transform: rotateY(180deg);
-  }
+}
+.img-text{
+    width: 100%;
+    color: #08282f;
+    padding-top: 10px;
+    position: relative;
+    top: 50px;
+}
+.img-text p{
+    text-align: center;
 
-  .img-text{
-    margin: 18%;    
-    
-  }
+}
 main img {
     height: 250px;
-    width: 300px;
+    width: 100%;
 } 
-
-
+.resipeButton {
+    border: 1px solid #08282fb7; 
+    padding: 10px;
+    position: relative;
+    transition: all 0.5s ease;
+    border-radius: 5px;
+}
+.resipeButton:hover {
+    background-color: #08282fb7; 
+    color: #c2d78a;
+    transform: scale(1.3);
+}
+.resipePara {
+    display: none;
+}
 /* --------------------- form ----------------*/
 .fieldset {
-    
-    background-color: #be9ddfcc;
-    width: 70%;
+    background-color: #a2e4c08c;
+    width: 80%;
     margin: auto;
     align-items: center;
     padding: 5%;
     margin-top: 5%;
     position: relative;
-    top: 50px;
-    left: 10px;
     margin-bottom: 10%;
     border: 0px;
 }
-
-
 .btn{
-    background-color: #92ddea;
-	border: 2px solid #9579d1;
+	border: 2px solid #08282fb7;
 	padding: 10px;
     width: 20%;
 	color: #141313;
 	font-size: 20px;
     transition: 1s ease;
-    text-align: center;
     text-decoration: none;
     display: inline-block;
     margin: 4px 2px;
     cursor: pointer; 
     border-radius: 5px;
     position: absolute;
-    left: 75%;
-    bottom: 40px;
+    right: 5%;
+    top: 40%;
     letter-spacing: 3px;
     text-transform: uppercase;
 
 } 
 .btn:hover {
-    border: 2px solid #9579d1;
+    border: 2px solid #08282fb7;
     font-size: 20px;
-    margin: 5px;
-    color: #2e2e2e;
-	background: #9579d1;
+    transform: scale(1.1);
+    color: #c2d78a;
+	background-color: #08282fb7;
 }
 .fieldset select {
     background: transparent;
@@ -161,7 +148,6 @@ main img {
     font-size: large;
     width: 200%;
 }
-
 .fieldset label{
     font-size: 20px;
     
