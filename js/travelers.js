@@ -18,7 +18,7 @@ AllPlaces(swim, camp, climb, allAct) {
     // this.votes = 0;
     // this.views = 0;
 
-    // this.allAct = allAct;
+    this.allAct = allAct;
     AllPlaces.all.push(this);
 
 }
