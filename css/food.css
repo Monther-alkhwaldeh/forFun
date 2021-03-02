@@ -82,6 +82,14 @@ main img {
     display: none;
     font-size: large;
 }
+
+.flip-card-back {
+    background-color: rgb(233, 240, 241);
+    width: 300px;
+    height: 250px;
+    overflow: scroll;
+  
+}
 /* --------------------- form ----------------*/
 .fieldset {
     background-color: #a2e4c08c;
