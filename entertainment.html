@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,22 +11,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap" rel="stylesheet">
     <!-- <link rel="stylesheet" href="./css/reset.css"> -->
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/entertaitment.css">
+    <link rel="stylesheet" href="./css/entertainment.css">
 </head>
-
 <body>
     <header class="navBar">
         <img src="./imgs/logo.png" alt="logo" class="logo" onclick="">
         <h1>M<span class="animated">oo</span>der</h1>
         <ul class="ull">
             <li><a href="./index.html"><i class="fas fa-home"></i> home</a></li>
-            <li class="drop"><a href="./"><i class="fas fa-comments"></i> content</a>
+            <li class="drop"><a><i class="fas fa-comments"></i> content</a>
                 <ul class="dropdwn-con">
                     <li><a href="./food.html"> cooking</a></li>
                     <li><a href="./travel.html"> travling</a></li>
                     <li><a href="./game.html"> games</a></li>
-
-                    <li><a href="./"> entertainment</a></li>
+                    <li><a href="./entertainment.html"> entertainment</a></li>
                 </ul>
             </li>
             <li><a href="./">extra link</a></li>
@@ -37,9 +34,8 @@
     </header>
     <section class="icon-bar">
         <a href="https://web.facebook.com" class="facebook"><i class="fa fa-facebook"></i></a>
-        <a href="https://twitter.com/" class="twitter"><i class="fa fa-twitter"></i></a>
+        <a href="https://github.com/four0four-Brain-Not-Found/forFun/" class="gitHub"><i style="font-size:24px" class="fa">&#xf09b;</i></a> 
         <a href="https://www.linkedin.com" class="linkedin"><i class="fa fa-linkedin"></i></a>
-        <a href="https://www.youtube.com" class="youtube"><i class="fa fa-youtube"></i></a>
     </section>
     </section>
     <section class="mainBox" id="qSec">
@@ -57,16 +53,21 @@
     </section>
     <section class="mainBox" id="qSec">
         <div id="videos"  width="300" height="200">
-            <!-- <video  src="" id="firstvideo"></video>
-            <video src="" id="seconedvideo"></video>
-            <video src="" id="thirdvideo"></video> -->
         </div>
     </section>
-
+    <section class="mainBox" id="qSec">
+        <form action="" id="forms">
+    <select name="" id="vList" > 
+        <option value="" > Please Choose Video </option> </select>
+         <p>Please Rate The Video From 1-10</p> 
+        <input id="ratenumber" type="number">
+        <input type="submit" value="Rate The Video" onclick="viewRate();">
+    </form>
+    <section id="rateUser"></section>
+    </section>
     <footer class="footr" id="footr">
         this is a footer results can go in here
     </footer>
-    <script src="./js/entertaiment.js"></script>
 </body>
-
+<script src="./js/entertainment.js"></script>
 </html>
