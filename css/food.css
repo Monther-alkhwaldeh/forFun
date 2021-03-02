@@ -2,8 +2,8 @@
     display: grid;
     grid-template-columns: auto auto auto;
     width: 100%;
-    margin-top: 2%;
-}
+/*     margin-top: %;
+ */}
 .grid-item {
     background-color: #80c2b498;
     border: 1px solid #3b3d3de7;
@@ -12,7 +12,7 @@
     text-align: center;
     margin: 15px;
     transition: all 0.3s ease;
-    height: 400px;
+    height: 360px;
 }
 .grid-item:hover{
     box-shadow: 0px 0px 5px #3b3d3de7;
@@ -68,7 +68,7 @@ main img {
 } 
 .resipeButton {
     border: 1px solid #08282fb7; 
-    padding: 10px;
+    padding: 5px;
     position: relative;
     transition: all 0.5s ease;
     border-radius: 5px;
@@ -80,6 +80,7 @@ main img {
 }
 .resipePara {
     display: none;
+    font-size: large;
 }
 /* --------------------- form ----------------*/
 .fieldset {
