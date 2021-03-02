@@ -17,9 +17,7 @@ function retrieve() {
 
     renderOrder();
   }
-
 }
-
 
 Food.all = [];
 
@@ -29,7 +27,6 @@ function handelTakeOrder(event) {
   const item = event.target.item.value;
   new Food(item, quantity);
   renderOrder();
-
 
 }
 
