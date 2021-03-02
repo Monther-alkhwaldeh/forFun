@@ -1,20 +1,27 @@
 'use strict';
+/*--------------start cooking code-------------------------------- */
 const foodForm = document.getElementById('food-Form');
 const orders = document.getElementById('orders');
+
+
+/*----------------constructer function---------------------------- */
 function Food(item, quantity) {
   this.item = item;
   this.quantity = quantity;
   Food.all.push(this);
   localStorage.setItem('orders', JSON.stringify(Food.all));
 }
+
+/**----------------retrieve the obj into JS form----------------   */
 function retrieve() {
   if (localStorage.length > 0) {
     Food.all = JSON.parse(localStorage.getItem('orders'));
     renderOrder();
   }
 }
-
 Food.all = [];
+
+/**----------------eventFunction-------------------------------- */
 function handelTakeOrder(event) {
   event.preventDefault();
   const quantity = parseFloat(event.target.quantity.value);
@@ -24,6 +31,8 @@ function handelTakeOrder(event) {
 
 }
 foodForm.addEventListener('submit', handelTakeOrder);
+
+/**------------------renderFunction----------------------------- */
 function renderOrder() {
   const ulEl = document.getElementById('orders');
   ulEl.innerHTML = ''; //to remove last order
@@ -44,24 +53,33 @@ function renderOrder() {
       preQuantity += Food.all[i].quantity;
       liEl.textContent = `Your Order : ${preQuantity} of ${Food.all[i].item}`;
     }
+
+    /*-------------------------prevent order of  nothing ---------------*/
+    if (preItem === '') {
+      ulEl.removeChild(ulEl.lastElementChild);
+    }
   }
+  foodForm.reset();
 }
-function MyFunction(recipe) {
-  this.recipe = recipe;
-  this.x = document.getElementById(this.recipe);
+
+
+function ViewCountry(country) {
+  this.country = country;
+  this.x = document.getElementById(this.country);
 }
-MyFunction.prototype.render = function () {
+ViewCountry.prototype.render = function () {
   if (this.x.style.display === 'block') {
     this.x.style.display = 'none';
   } else {
     this.x.style.display = 'block';
   }
 };
-let resipe1 = new MyFunction('resipePara1');
-let resipe2 = new MyFunction('resipePara2');
-let resipe3 = new MyFunction('resipePara3');
-let resipe4 = new MyFunction('resipePara4');
-let resipe5 = new MyFunction('resipePara5');
-let resipe6 = new MyFunction('resipePara6');
+let CoBottun1 = new ViewCountry('resipePara1');
+let CoBottun2 = new ViewCountry('resipePara2');
+let CoBottun3 = new ViewCountry('resipePara3');
+let CoBottun4 = new ViewCountry('resipePara4');
+let CoBottun5 = new ViewCountry('resipePara5');
+let CoBottun6 = new ViewCountry('resipePara6');
 retrieve();
 renderOrder();
+
