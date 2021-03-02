@@ -1,7 +1,7 @@
 "use strict";
 
 function randomNumber(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 
@@ -20,75 +20,74 @@ const imagesSection = document.getElementById('imagesSection');
 
 
 function render() {
-    const leftIndex = randomNumber(0, swim.length - 1);
-    const centerIndex = randomNumber(0, climb.length - 1);
-    const rightIndex = randomNumber(0, camp.length - 1);
+  const leftIndex = randomNumber(0, swim.length - 1);
+  const centerIndex = randomNumber(0, climb.length - 1);
+  const rightIndex = randomNumber(0, camp.length - 1);
 
-    // left imge
-    leftImage.src = './imgs/travelimg/' + swim[leftIndex] + '.jpg';
-    leftImage.title = swim[leftIndex];
-    leftImage.alt = swim[leftIndex];
+  // left imge
+  leftImage.src = './imgs/travelimg/' + swim[leftIndex] + '.jpg';
+  leftImage.title = swim[leftIndex];
+  leftImage.alt = swim[leftIndex];
 
-    // center imge
-    centerImage.src = './imgs/travelimg/' + camp[centerIndex] + '.jpg';
-    centerImage.title = camp[centerIndex];
-    centerImage.alt = camp[centerIndex];
-    // right imge
-    rightImage.src = './imgs/travelimg/' + climb[rightIndex] + '.jpg';
-    rightImage.title = climb[rightIndex];
-    rightImage.alt = climb[rightIndex];
+  // center imge
+  centerImage.src = './imgs/travelimg/' + camp[centerIndex] + '.jpg';
+  centerImage.title = camp[centerIndex];
+  centerImage.alt = camp[centerIndex];
+  // right imge
+  rightImage.src = './imgs/travelimg/' + climb[rightIndex] + '.jpg';
+  rightImage.title = climb[rightIndex];
+  rightImage.alt = climb[rightIndex];
 
 
-    if (leftIndex === centerIndex || rightIndex === leftIndex || rightIndex === centerIndex) {
-        render()
-    } else {
-
-    }
+  if (leftIndex === centerIndex || rightIndex === leftIndex || rightIndex === centerIndex) {
+    render()
+  } else {
+  }
 
 }
 
 let Vote = []
 
 function updateList() {
-    let upList = JSON.stringify(Vote);
-    localStorage.setItem("travelVotes", upList);
+  let upList = JSON.stringify(Vote);
+  localStorage.setItem("travelVotes", upList);
 }
 
 
 function getList() {
-    let gList = localStorage.getItem("travelVotes");
-    if (gList) {
-        Vote = JSON.parse(gList);
-        render();
-    }
+  let gList = localStorage.getItem("travelVotes");
+  if (gList) {
+    Vote = JSON.parse(gList);
+    render();
+  }
 }
 
 imagesSection.addEventListener('click', handleClick);
 
 function handleClick(event) {
-    laps--;
+  laps--;
 
-    if (laps === 0) {
-        imagesSection.removeEventListener('click', handleClick);
-        // createChart();
-    } else {
-        if (event.target.id !== 'images-section') {
-            console.log(event.target);
-            for (let i = 0; i < allAct.length; i++) {
-                for (let j = 0; j < allAct[i].length; j++) {
-                    {
-                        if (allAct[i][j] === event.target) {
-                            allAct[i][j].votes++;
-                        }
-                        Vote.push(allAct[i][j].votes)
-                    }
-                    render();
-                    console.log(allAct[i][j]);
-                }
+  if (laps === 0) {
+    imagesSection.removeEventListener('click', handleClick);
+    // createChart();
+  } else {
+    if (event.target.id !== 'images-section') {
+      console.log(event.target);
+      for (let i = 0; i < allAct.length; i++) {
+        for (let j = 0; j < allAct[i].length; j++) {
+          {
+            if (allAct[i][j] === event.target) {
+              allAct[i][j].votes++;
             }
+            Vote.push(allAct[i][j].votes)
+          }
+          render();
+          console.log(allAct[i][j]);
         }
-        render();
+      }
     }
+    render();
+  }
 
 }
 console.log(Vote)

@@ -47,7 +47,7 @@ function renderOrder() {
       liEl.textContent = `Your Order : ${Food.all[i].quantity} of ${Food.all[i].item}`;
       preItem = Food.all[i].item;
     } else {
-      ulEl.removeChild(ulEl.lastElementChild);
+      ulEl.removeChild(ulEl.lastElementChild); //add quantity to the same order
       const liEl = document.createElement('li');
       ulEl.appendChild(liEl);
       preQuantity += Food.all[i].quantity;
