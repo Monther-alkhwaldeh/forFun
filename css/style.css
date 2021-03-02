@@ -180,7 +180,7 @@ body {
 .footr {
     width: 100%;
     height: 50px;
-    position: fixed;
+    position: relative;
     bottom: 0px;
     background-color: #80c2b498;
     text-align: center;

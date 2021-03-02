@@ -8,6 +8,7 @@ function randomNumber(min, max) {
 const swim = ['Bolivia', 'India', 'lake', 'park'];
 const camp = ['switzwrland', 'Norway', 'beren', 'alps'];
 const climb = ['Montana', 'Washington', 'Forde', 'gorgia'];
+<<<<<<< HEAD
 // const allAct = [swim, camp, climb]
 let laps = 12;
 
@@ -21,6 +22,26 @@ function Travel (swim,camp,climb){
 }
 Travel.all=[];
 
+=======
+const allAct = [swim, camp, climb];
+
+function
+AllPlaces(swim, camp, climb, allAct) {
+    this.swim = swim;
+    this.camp = camp;
+    this.climb = climb;
+    // this.votes = 0;
+    // this.views = 0;
+
+    this.allAct = allAct;
+    AllPlaces.all.push(this);
+
+}
+let laps = 12;
+AllPlaces = []
+
+
+>>>>>>> main
 
 
 const leftImage = document.getElementById('left-image');
@@ -55,8 +76,13 @@ function render() {
   // }
 
 }
+<<<<<<< HEAD
 
 // let Vote = [];
+=======
+let votes = 0
+let Vote = []
+>>>>>>> main
 
 // function updateList() {
 //   let upList = JSON.stringify(Vote);
@@ -75,6 +101,7 @@ function render() {
 imagesSection.addEventListener('click', handleClick);
 
 function handleClick(event) {
+<<<<<<< HEAD
   laps--;
   if (laps === 0) {
     imagesSection.removeEventListener('click', handleClick);
@@ -90,6 +117,42 @@ function handleClick(event) {
    
   } render();
 }
+=======
+    laps--;
+
+    if (laps === 0) {
+        imagesSection.removeEventListener('click', handleClick);
+        // createChart();
+    } else {
+        if (event.target.id !== 'images-section') {
+            console.log(event.target);
+
+
+            console.log(event.target)
+            debugger;
+            for (let i = 0; i < allAct.length; i++) {
+                for (let j = 0; j < allAct[i].length; j++) {
+                    if (this.swim === event.target.title || this.climb === event.target.title || this.camp === event.target.title) {
+                        votes++;
+
+                    }
+
+
+                }
+                Vote.push(votes)
+
+                render();
+                console.log(votes)
+                console.log(swim, climb, camp);
+            }
+        }
+    }
+}
+render();
+
+console.log(Vote)
+
+>>>>>>> main
 imagesSection.addEventListener('click', handleClick);
 render();
 
