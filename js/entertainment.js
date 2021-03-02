@@ -42,7 +42,7 @@ function rendervideos() {
   }
 }
 rendervideos();
-
+// -------------audio constructor-----------------------------------
 function AudioC(audioName, aExt) {
   this.audioName = audioName;
   this.path = `./audioclip/${audioName}.${aExt}`;
@@ -52,7 +52,7 @@ AudioC.all = [];
 for (let i = 0; i < audioName.length; i++) {
   new AudioC(audioName[i], aExt[i]);
 }
-
+// ---------audio render---------------------------------
 function audioRender() {
   const h3 = document.createElement('h3');
   audioContainer.appendChild(h3);
@@ -68,6 +68,7 @@ function audioRender() {
 }
 audioRender();
 
+// -------user rate ----constructor----------------------------------
 
 function UserRate(nameU, rateN) {
   this.nameU = nameU;
@@ -76,7 +77,7 @@ function UserRate(nameU, rateN) {
   localStorage.setItem('userrate', JSON.stringify(UserRate.all));
 }
 UserRate.all = [];
-
+// --------------rate Render---------------------------
 function rateRender() {
   const divC = document.getElementById('userRate');
   const rateU = document.createElement('ul');
@@ -90,6 +91,7 @@ function rateRender() {
     rateLi.textContent = ` Thank You ${UserRate.all[i].nameU} And your rate is : ${UserRate.all[i].rateN}`;
   }
 }
+// -----------retrive local storage --------------------------
 function retriverate() {
   if (localStorage > 0) {
     UserRate.all = localStorage.getItem('userrate');
@@ -100,7 +102,7 @@ function retriverate() {
 retriverate();
 
 
-
+// ---------submit button----------------------------------
 
 function submitB(event) {
 
