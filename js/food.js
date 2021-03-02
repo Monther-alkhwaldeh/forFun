@@ -45,6 +45,10 @@ function renderOrder() {
       liEl.textContent = `Your Order : ${preQuantity} of ${Food.all[i].item}`;
     }
   }
+  if (preItem===''){
+    ulEl.removeChild(ulEl.lastElementChild);
+  }
+  foodForm.reset();
 }
 function MyFunction(recipe) {
   this.recipe = recipe;
