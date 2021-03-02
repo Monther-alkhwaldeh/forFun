@@ -1,20 +1,27 @@
 'use strict';
+/*--------------start cooking code-------------------------------- */
 const foodForm = document.getElementById('food-Form');
 const orders = document.getElementById('orders');
+
+
+/*----------------constructer function---------------------------- */
 function Food(item, quantity) {
   this.item = item;
   this.quantity = quantity;
   Food.all.push(this);
   localStorage.setItem('orders', JSON.stringify(Food.all));
 }
+
+/**----------------retrieve the obj into JS form----------------   */
 function retrieve() {
   if (localStorage.length > 0) {
     Food.all = JSON.parse(localStorage.getItem('orders'));
     renderOrder();
   }
 }
-
 Food.all = [];
+
+/**----------------eventFunction-------------------------------- */
 function handelTakeOrder(event) {
   event.preventDefault();
   const quantity = parseFloat(event.target.quantity.value);
@@ -24,6 +31,8 @@ function handelTakeOrder(event) {
 
 }
 foodForm.addEventListener('submit', handelTakeOrder);
+
+/**------------------renderFunction----------------------------- */
 function renderOrder() {
   const ulEl = document.getElementById('orders');
   ulEl.innerHTML = ''; //to remove last order
@@ -44,7 +53,13 @@ function renderOrder() {
       preQuantity += Food.all[i].quantity;
       liEl.textContent = `Your Order : ${preQuantity} of ${Food.all[i].item}`;
     }
+
+    /*-------------------------prevent order of  nothing ---------------*/
+    if (preItem === '') {
+      ulEl.removeChild(ulEl.lastElementChild);
+    }
   }
+  foodForm.reset();
 }
 
 
