@@ -12,6 +12,13 @@ const allAct = [swim, camp, climb]
 let laps = 12;
 let votes = 0;
 
+function Travel(swim,camp,climb){
+  this.swim=swim;
+  this.camp=camp;
+  this.climb=climb;
+  Travel.all.push(this);
+}
+Travel.all=[];
 
 const leftImage = document.getElementById('left-image');
 const centerImage = document.getElementById('center-image');
@@ -70,26 +77,27 @@ function handleClick(event) {
   if (laps === 0) {
     imagesSection.removeEventListener('click', handleClick);
     // createChart();
-  } else {
-    if (event.target.id !== 'images-section') {
-      console.log(event.target);
-      for (let i = 0; i < allAct.length; i++) {
-        for (let j = 0; j < allAct[i].length; j++) {
-          {
-            if (allAct[i][j] === event.target) {
-              allAct[i][j].votes++;
-            }
-            Vote.push(allAct[i][j].votes)
-          }
-          render();
-          console.log(allAct[i][j]);
-        }
+  } else if (event.target.id !== 'images-section') {
+    console.log(event.target);
+    for (let i = 0; i < Travel.all.length; i++) {
+      if (Travel.all[i].swim === event.target.title) {
+        Travel.all[i].votes++;
+      }else if (Travel.all[i].camp === event.target.title){
+        Travel.all[i].votes++;
+      }else if (Travel.all[i].climb === event.target.title){
+        Travel.all[i].votes++;
       }
+      console.log(Travel.all.votes);
+      render();
+      console.log(allAct[i][j]);
     }
-    render();
   }
 
 }
+render();
+
+
+
 console.log(Vote)
 
 imagesSection.addEventListener('click', handleClick);
