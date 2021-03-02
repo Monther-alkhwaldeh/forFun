@@ -9,24 +9,25 @@ const swim = ['Bolivia', 'India', 'lake', 'park'];
 const camp = ['switzwrland', 'Norway', 'beren', 'alps'];
 const climb = ['Montana', 'Washington', 'Forde', 'gorgia'];
 const allAct = [swim, camp, climb];
+let votes = 0;
+let Vote = [];
 
 function
-AllPlaces(swim, camp, climb, allAct) {
+AllPlaces(swim, camp, climb, allAct, votes) {
     this.swim = swim;
     this.camp = camp;
     this.climb = climb;
-    // this.votes = 0;
+    this.votes = 0;
     // this.views = 0;
 
     this.allAct = allAct;
-    AllPlaces.all.push(this);
+    ///AllPlaces.all.push(this);
 
 }
 let laps = 12;
-AllPlaces = []
+//AllPlaces = []
 
-
-
+let tmp = new AllPlaces(swim, camp, climb, allAct, votes);
 
 const leftImage = document.getElementById('left-image');
 const centerImage = document.getElementById('center-image');
@@ -56,13 +57,10 @@ function render() {
 
     if (leftIndex === centerIndex || rightIndex === leftIndex || rightIndex === centerIndex) {
         render()
-    } else {
-
     }
 
 }
-let votes = 0
-let Vote = []
+
 
 function updateList() {
     let upList = JSON.stringify(Vote);
@@ -90,31 +88,22 @@ function handleClick(event) {
         if (event.target.id !== 'images-section') {
             console.log(event.target);
 
-
-            console.log(event.target)
-            debugger;
             for (let i = 0; i < allAct.length; i++) {
-                for (let j = 0; j < allAct[i].length; j++) {
-                    if (this.swim === event.target.title || this.climb === event.target.title || this.camp === event.target.title) {
-                        votes++;
-
-                    }
-
-
+                console.log(allAct.length);
+                if (tmp.swim[i] === event.target.title || tmp.climb[i] === event.target.title || tmp.camp[i] === event.target.title) {
+                    tmp.votes++;
+                    console.log("The votes are :" +
+                        tmp.votes);
+                    Vote.push(tmp.votes)
                 }
-                Vote.push(votes)
-
-                render();
-                console.log(votes)
-                console.log(swim, climb, camp);
             }
         }
+        Vote.push(votes)
+        render();
+
+        console.log(Vote)
     }
 }
-render();
-
-console.log(Vote)
-
 imagesSection.addEventListener('click', handleClick);
 render();
 
