@@ -55,29 +55,30 @@ function renderOrder() {
     }
 
     /*-------------------------prevent order of  nothing ---------------*/
-    if (preItem===''){
+    if (preItem === '') {
       ulEl.removeChild(ulEl.lastElementChild);
     }
   }
   foodForm.reset();
 }
-/*----------------------country button--------------------------------- */
-function MyFunction(recipe) {
-  this.recipe = recipe;
-  this.x = document.getElementById(this.recipe);
+
+
+function ViewCountry(country) {
+  this.country = country;
+  this.x = document.getElementById(this.country);
 }
-MyFunction.prototype.render = function () {
+ViewCountry.prototype.render = function () {
   if (this.x.style.display === 'block') {
     this.x.style.display = 'none';
   } else {
     this.x.style.display = 'block';
   }
 };
-let resipe1 = new MyFunction('resipePara1');
-let resipe2 = new MyFunction('resipePara2');
-let resipe3 = new MyFunction('resipePara3');
-let resipe4 = new MyFunction('resipePara4');
-let resipe5 = new MyFunction('resipePara5');
-let resipe6 = new MyFunction('resipePara6');
+let CoBottun1 = new ViewCountry('resipePara1');
+let CoBottun2 = new ViewCountry('resipePara2');
+let CoBottun3 = new ViewCountry('resipePara3');
+let CoBottun4 = new ViewCountry('resipePara4');
+let CoBottun5 = new ViewCountry('resipePara5');
+let CoBottun6 = new ViewCountry('resipePara6');
 retrieve();
 renderOrder();
