@@ -14,6 +14,7 @@ function retrieve() {
     renderOrder();
   }
 }
+
 Food.all = [];
 function handelTakeOrder(event) {
   event.preventDefault();
@@ -21,6 +22,7 @@ function handelTakeOrder(event) {
   const item = event.target.item.value;
   new Food(item, quantity);
   renderOrder();
+
 }
 foodForm.addEventListener('submit', handelTakeOrder);
 function renderOrder() {
