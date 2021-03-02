@@ -8,9 +8,24 @@ function randomNumber(min, max) {
 const swim = ['Bolivia', 'India', 'lake', 'park'];
 const camp = ['switzwrland', 'Norway', 'beren', 'alps'];
 const climb = ['Montana', 'Washington', 'Forde', 'gorgia'];
-const allAct = [swim, camp, climb]
+const allAct = [swim, camp, climb];
+
+function
+AllPlaces(swim, camp, climb, allAct) {
+    this.swim = swim;
+    this.camp = camp;
+    this.climb = climb;
+    // this.votes = 0;
+    // this.views = 0;
+
+    // this.allAct = allAct;
+    AllPlaces.all.push(this);
+
+}
 let laps = 12;
-let votes = 0;
+AllPlaces = []
+
+
 
 
 const leftImage = document.getElementById('left-image');
@@ -46,7 +61,7 @@ function render() {
     }
 
 }
-
+let votes = 0
 let Vote = []
 
 function updateList() {
@@ -74,23 +89,30 @@ function handleClick(event) {
     } else {
         if (event.target.id !== 'images-section') {
             console.log(event.target);
+
+
+            console.log(event.target)
+            debugger;
             for (let i = 0; i < allAct.length; i++) {
                 for (let j = 0; j < allAct[i].length; j++) {
-                    {
-                        if (allAct[i][j] === event.target) {
-                            allAct[i][j].votes++;
-                        }
-                        Vote.push(allAct[i][j].votes)
+                    if (this.swim === event.target.title || this.climb === event.target.title || this.camp === event.target.title) {
+                        votes++;
+
                     }
-                    render();
-                    console.log(allAct[i][j]);
+
+
                 }
+                Vote.push(votes)
+
+                render();
+                console.log(votes)
+                console.log(swim, climb, camp);
             }
         }
-        render();
     }
-
 }
+render();
+
 console.log(Vote)
 
 imagesSection.addEventListener('click', handleClick);
