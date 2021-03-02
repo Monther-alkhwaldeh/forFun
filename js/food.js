@@ -82,3 +82,4 @@ let CoBottun5 = new ViewCountry('resipePara5');
 let CoBottun6 = new ViewCountry('resipePara6');
 retrieve();
 renderOrder();
+
