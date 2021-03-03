@@ -12,6 +12,7 @@ function Food(item, quantity) {
   Food.all.push(this);
   localStorage.setItem('orders', JSON.stringify(Food.all));
 }
+Food.all = [];
 
 /**----------------retrieve the obj into JS form----------------   */
 function retrieve() {
@@ -20,7 +21,6 @@ function retrieve() {
     renderOrder();
   }
 }
-Food.all = [];
 
 /**----------------eventFunction-------------------------------- */
 function handelTakeOrder(event) {
