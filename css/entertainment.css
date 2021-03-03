@@ -1,4 +1,14 @@
 
+.mainBox{
+  background-color:;
+}
+
+.para{
+position: relative;
+text-align: center;
+margin-left: 25%;
+margin-top: 0%;
+}
 .container {
     display: flex;
     justify-content: center;
@@ -90,3 +100,76 @@
     margin-top: 30%;
     margin-left: 30%;
   }
+
+  #h3{
+    text-align: center;
+    font-family: 'Indie Flower', cursive;
+    font-family: 'Lobster', cursive;
+    font-size: 200%;
+
+  }
+
+#audioId{
+text-align: center;
+font-family: 'Indie Flower', cursive;
+    font-family: 'Lobster', cursive;
+    font-size: 200%;
+}
+  #fVideos{
+    padding: 2%;
+  border: 1px solid #ccc;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    
+  }
+
+  #audioS{
+    padding: 2%;
+  border: 1px solid #ccc;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    border-radius: 50%;
+  flex-grow: 0;
+  }
+
+  #userRate{
+    border: 5px outset rgba(0,0,0,0.16);
+  background-color: lightblue;
+  /* align-items: center; */
+  text-align: center;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  }
+  #lie1{
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Indie Flower', cursive;
+    font-family: 'Lobster', cursive;
+    font-size: 150%;
+    }
+    #bSubmit{
+      /* width: 15%; */
+    text-decoration: none;
+    border: 2px solid #08282fb7;
+    transition: all 0.5s ease;
+    font-size: 10px;
+    padding: 5px;
+    position: relative;
+    float: right;
+    /* top: -100px; */
+    right: 10%;
+    top: 10%;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    }
+    #bSubmit{
+      background-color: #142a72dc;
+    color: #d1dabb;
+    }
+
+  /* #nameP{
+    float: left;
+  } */
+  /* #name{
+float: left;  
+}
+#ratenumber{
+  float: left;
+} */
