@@ -1,3 +1,26 @@
+
+.paraCook  {
+    text-align: center;
+    width: 80%;
+    margin-left: 3.01cm;
+    
+}
+
+.p1 {
+    font-size: x-large;
+}
+
+.p2 {
+    line-height: 2;
+    background-color: #80c2b462;
+    padding: 10px;
+    letter-spacing: 1.5px;
+    word-spacing: 3px;
+    
+
+}
+
+
 .grid-container {
     display: grid;
     grid-template-columns: auto auto auto;
@@ -88,6 +111,8 @@ main img {
     width: 300px;
     height: 250px;
     overflow: scroll;
+/*     list-style: square inside url("../imgs/cooking/food7.png");
+ */
   
 }
 /* --------------------- form ----------------*/
