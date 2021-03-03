@@ -1,0 +1,39 @@
+#small-talk{
+    text-align: center;
+    margin: 5%;
+    color: #115868;
+    font-size: large;
+    font-style: oblique;
+    font-weight: bold;
+
+}
+main img{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+
+}
+.about{
+    width: 33%;
+    float: left;
+    text-align: center;
+}
+.intro{
+    clear: both;
+    text-align: inherit;
+    font-size: medium;
+    font-weight: initial;
+    font-family: Arial, Helvetica, sans-serif ;
+    color: #115868;
+
+}
+
+a{
+    text-decoration: none;
+    font-weight: bold;
+    color: navy;
+}
+
+footer{
+    clear: both;
+}
