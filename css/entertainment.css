@@ -158,20 +158,28 @@ font-family: 'Indie Flower', cursive;
     font-family: 'Lobster', cursive;
     font-size: 150%;
     }
-    #bSubmit{
-    text-decoration: none;
-    border: 2px solid #08282fb7;
-    transition: all 0.5s ease;
-    font-size: 10px;
-    padding: 5px;
-    position: relative;
-    float: right;
-    right: 10%;
-    top: 10%;
-    letter-spacing: 3px;
-    text-transform: uppercase;
+    .bSubmit{
+      border: 2px solid #08282fb7;
+      padding: 10px;
+      width: 15%;
+      color: #141313;
+      font-size: 20px;
+      transition: 1s ease;
+      text-decoration: none;
+      display: inline-block;
+      margin: 4px 2px;
+      cursor: pointer; 
+      border-radius: 5px;
+      position: relative;
+      right: -3%;
+      top: 40%;
+      letter-spacing: 3px;
+      text-transform: uppercase;
     }
-    #bSubmit{
-      background-color: #142a72dc;
-    color: #d1dabb;
+    .bSubmit:hover{
+      border: 2px solid #08282fb7;
+    font-size: 20px;
+    transform: scale(1.1);
+    color: #C2D78A;
+    background-color: #08282fb7;
     }
