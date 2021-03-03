@@ -13,19 +13,19 @@ let votes = 0;
 let Vote = [];
 
 function
-AllPlaces(swim, camp, climb, allAct, votes) {
+AllPlaces(swim, camp, climb, allAct) {
     this.swim = swim;
     this.camp = camp;
     this.climb = climb;
     this.votes = 0;
-    // this.views = 0;
+
 
     this.allAct = allAct;
-    ///AllPlaces.all.push(this);
+
 
 }
 let laps = 12;
-//AllPlaces = []
+
 
 let tmp = new AllPlaces(swim, camp, climb, allAct, votes);
 
@@ -61,20 +61,21 @@ function render() {
 
 }
 
-
 function updateList() {
     let upList = JSON.stringify(Vote);
-    localStorage.setItem("travelVotes", upList);
+    localStorage.setItem("PlaceVotes", upList);
 }
 
 
 function getList() {
-    let gList = localStorage.getItem("travelVotes");
+    let gList = localStorage.getItem("PlaceVotes");
     if (gList) {
         Vote = JSON.parse(gList);
         render();
     }
 }
+
+
 
 imagesSection.addEventListener('click', handleClick);
 
@@ -83,6 +84,7 @@ function handleClick(event) {
 
     if (laps === 0) {
         imagesSection.removeEventListener('click', handleClick);
+        document.getElementById('btn').hidden = false;
         // createChart();
     } else {
         if (event.target.id !== 'images-section') {
@@ -95,56 +97,106 @@ function handleClick(event) {
                     console.log("The votes are :" +
                         tmp.votes);
                     Vote.push(tmp.votes)
+
+
                 }
+
             }
+
         }
+
         Vote.push(votes)
         render();
 
         console.log(Vote)
     }
+
 }
 imagesSection.addEventListener('click', handleClick);
 render();
 
 
 
-window.onload = function() {
-    const placetNames = [];
-    const placetVotes = [];
-    for (let i = 0; i < allAct.length; i++) {
-        placetNames.push(tmp.swim[i], tmp.climb[i], tmp.camp[i]);
-        placetVotes.push(tmp.votes[i]);
+
+
+
+function wherTo() {
+    const wOne = ['Netherlands: it have big sea', 'Iceland: it have a nice land scape with a big river', 'Bali: you cant Imagine the pur natural their ']
+    const fOne = randomNumber(0, wOne.length - 1);
+    const wTow = ['Geirangerfjerford: it have small mountain with a cool waterfall ', 'Honfn: it is the most green place with high mountain', 'Geisler Alm: it is have mountains with frzen tops']
+    const fTow = randomNumber(0, wTow.length - 1);
+    const WThree = ['Ayder: it have a nice small cottage inside small forest', 'Wadi Ram: it have a camp in the desert', 'Whashington: it have a camp inside a large Forest']
+    const fTthree = randomNumber(0, WThree.length - 1);
+    // prompet
+    const pOne = prompt('do you like swim?', "<yes or no>")
+    if (pOne.toLowerCase() === 'yes') {
+        alert('we recommend you to ..' + wOne[fOne]);
+    } else if (pOne.toLowerCase() === 'no') {
+        alert('you may like something else')
     }
-    var chart = new CanvasJS.Chart("chartContainer", {
-        title: {
-            text: "upon on your choice we recommend you to ...",
-            fontFamily: "Impact",
-            fontWeight: "normal"
-        },
+    const pTow = prompt('do you like climb?', "<yes or no>")
+    if (pTow.toLowerCase() === 'yes') {
+        alert('we recommend you to ..' + wTow[fTow]);
+    } else if (pTow.toLowerCase() === 'no') {
+        alert('why not to try new things!')
+    }
+    const pThree = prompt('do you like camping?', "<yes or no>")
+    if (pThree.toLowerCase() === 'yes') {
+        alert('we recommend you to ..' + WThree[fTthree]);
+    } else if (pThree.toLowerCase() === 'no') {
+        alert('traveling Make you see what you have never seen before!!')
+    }
 
-        legend: {
-            verticalAlign: "bottom",
-            horizontalAlign: "center"
-        },
-        data: [{
-            //startAngle: 45,
-            indexLabelFontSize: 20,
-            indexLabelFontFamily: "Garamond",
-            indexLabelFontColor: "rgb(0, 76, 153)",
-            indexLabelLineColor: "rgb(0, 153, 153)",
-            indexLabelPlacement: "outside",
-            type: "doughnut",
-            showInLegend: true,
-            dataPoints: [
-                { y: placetVotes, legendText: placetNames },
-
-            ]
-        }]
-    });
-
-    chart.render();
 }
+updateList()
+getList()
+
+// function createChart() {
+//     const ctx = document.getElementById('myChart').getContext('2d');
+
+//     const placeNames = [];
+//     const placeVotes = [];
+//     for (let i = 0; i < allAct.length; i++) {
+//         placeNames.push(tmp);
+//         placeVotes.push(tmp.votes[i]);
+//     }
+//     console.log('Votes', placeVotes);
+//     new Chart(ctx, {
+//         // The type of chart we want to create
+//         type: 'doughnut',
+
+
+//         // The data for our dataset
+//         data: {
+//             labels: [placeNames, placeVotes],
+
+//             datasets: [{
+//                 label: ' votes:',
+//                 borderAlign: 'center',
+//                 borderWidth: '15px',
+//                 offset: '15px',
+//                 hoverBackgroundColor: 'rgb(255, 255, 51)',
+//                 backgroundColor: [
+//                     'rgb(0, 255, 128)',
+//                     'rgb(0, 153, 76)',
+//                     'rgb(0,128,255)',
+//                 ],
+//                 hoverOffset: 4
+//             }]
+//         },
+
+
+
+//         // Configuration options go here
+
+//         options: {
+//             cutout: '50%',
+//             radius: '100%',
+//             circumference: 360,
+//             animation: true,
+//         }
+//     });
+// };
 
 // function createChart() {
 //     constchart = new CanvasJS.Chart("chartContainer"), ;
