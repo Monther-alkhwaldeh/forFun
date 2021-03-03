@@ -52,6 +52,7 @@ function render() {
   leftImage.title = swim[leftIndex];
   leftImage.alt = swim[leftIndex];
 
+<<<<<<< HEAD
   // center imge
   centerImage.src = './imgs/travelimg/' + camp[centerIndex] + '.jpg';
   centerImage.title = camp[centerIndex];
@@ -67,6 +68,9 @@ function render() {
   }
 
 }
+=======
+
+>>>>>>> main
 
 // function updateList() {
 //   let upList = JSON.stringify(Vote);
@@ -110,6 +114,26 @@ function handleClick(event) {
 
       }
 
+<<<<<<< HEAD
+=======
+        function updateList() {
+            let upList = JSON.stringify(Vote);
+            localStorage.setItem("PlaceVotes", upList);
+        }
+
+
+        function getList() {
+            let gList = localStorage.getItem("PlaceVotes");
+            if (gList) {
+                Vote = JSON.parse(gList);
+                render();
+            }
+        }
+        updateList()
+        getList()
+        console.log(Vote)
+        console.log('nothing to see')
+>>>>>>> main
     }
 
     Vote.push(votes);
@@ -154,6 +178,7 @@ function wherTo() {
     alert('traveling Make you see what you have never seen before!!');
   }
 
+<<<<<<< HEAD
 }
 // updateList();
 // getList();
@@ -252,3 +277,6 @@ retrieve();
 //         options: {},
 //     });
 // };
+=======
+}
+>>>>>>> main
