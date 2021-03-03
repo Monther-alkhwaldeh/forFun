@@ -61,19 +61,7 @@ function render() {
 
 }
 
-function updateList() {
-    let upList = JSON.stringify(Vote);
-    localStorage.setItem("PlaceVotes", upList);
-}
 
-
-function getList() {
-    let gList = localStorage.getItem("PlaceVotes");
-    if (gList) {
-        Vote = JSON.parse(gList);
-        render();
-    }
-}
 
 
 
@@ -108,7 +96,23 @@ function handleClick(event) {
         Vote.push(votes)
         render();
 
+        function updateList() {
+            let upList = JSON.stringify(Vote);
+            localStorage.setItem("PlaceVotes", upList);
+        }
+
+
+        function getList() {
+            let gList = localStorage.getItem("PlaceVotes");
+            if (gList) {
+                Vote = JSON.parse(gList);
+                render();
+            }
+        }
+        updateList()
+        getList()
         console.log(Vote)
+        console.log('nothing to see')
     }
 
 }
@@ -148,100 +152,3 @@ function wherTo() {
     }
 
 }
-updateList()
-getList()
-
-// function createChart() {
-//     const ctx = document.getElementById('myChart').getContext('2d');
-
-//     const placeNames = [];
-//     const placeVotes = [];
-//     for (let i = 0; i < allAct.length; i++) {
-//         placeNames.push(tmp);
-//         placeVotes.push(tmp.votes[i]);
-//     }
-//     console.log('Votes', placeVotes);
-//     new Chart(ctx, {
-//         // The type of chart we want to create
-//         type: 'doughnut',
-
-
-//         // The data for our dataset
-//         data: {
-//             labels: [placeNames, placeVotes],
-
-//             datasets: [{
-//                 label: ' votes:',
-//                 borderAlign: 'center',
-//                 borderWidth: '15px',
-//                 offset: '15px',
-//                 hoverBackgroundColor: 'rgb(255, 255, 51)',
-//                 backgroundColor: [
-//                     'rgb(0, 255, 128)',
-//                     'rgb(0, 153, 76)',
-//                     'rgb(0,128,255)',
-//                 ],
-//                 hoverOffset: 4
-//             }]
-//         },
-
-
-
-//         // Configuration options go here
-
-//         options: {
-//             cutout: '50%',
-//             radius: '100%',
-//             circumference: 360,
-//             animation: true,
-//         }
-//     });
-// };
-
-// function createChart() {
-//     constchart = new CanvasJS.Chart("chartContainer"), ;
-
-//     const placetNames = [];
-//     const placetVotes = [];
-//     for (let i = 0; i < allAct.length; i++) {
-//         placetNames.push(tmp.swim[i], tmp.climb[i], tmp.camp[i]);
-//         placetVotes.push(tmp.votes[i]);
-//     }
-//     console.log('Votes', placetVotes);
-//     new Chart(myDoughnutChart, {
-//         // The type of chart we want to create
-//         type: 'doughnut',
-
-//         // The data for our dataset
-//         data: {
-//             labels: [tmp.swim,
-//                 tmp.climb,
-//                 tmp.camp
-//             ],
-//             datasets: [{
-//                 label: 'votes',
-//                 data: [placetNames, placetVotes],
-
-
-
-//                 borderAlign: 'center',
-//                 borderWidth: 5,
-
-//                 label: 'votes:',
-//                 backgroundColor: ['rgb(0, 153, 76)',
-//                     'rgb(0, 153, 153)',
-//                     'rgb(0, 76, 153)'
-//                 ],
-//                 hoverOffset: 4,
-
-
-
-
-
-//             }, ],
-//         },
-
-
-//         options: {},
-//     });
-// };
