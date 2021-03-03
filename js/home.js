@@ -11,90 +11,88 @@ let qwsshn= ['Difficulty focusing on everyday tasks'
   , 'Considering harming yourself, or committing suicide'
   , 'If you have had any days with issues above, how difficult have these problems made it for you at work, home, school, or with other people?'];
 
-let ansrsArr = ['Never'
-  , 'Some of the time'
-  , 'Most of times '
-  , 'Nearly all the time'];
-
+const qForm = document.getElementById('showquiz');
+const quesBox = document.getElementsByClassName('quesBox');
+for (let i = 0; i < quesBox.length; i++) {
+  quesBox[i].style.display = 'none';
+}
 let score = 0;
 function swich(){
   document.getElementById('qSec').style.display = 'none';
+  qForm.hidden = false;
   ttt.quesFlag = true;
   ttt.renderQ();
 }
-
-function Test (question, answers){
+function Test (question){
   this.question = question;
-  this.answers = answers;
-  let score = 0;
-  const qForm = document.getElementById('qForm');
   this.quesFlag = false;
   Test.prototype.renderQ = function() {
     if (this.quesFlag){
-      const questionSection = document.createElement('section');
-      qForm.appendChild(questionSection);
-      questionSection.setAttribute('class','quesBox');
-      questionSection.setAttribute('id','questionBox');
       for(let i = 0; i < question.length; i++){
+        const questionSection = document.getElementById(`qHead-${i}`);
         const qstion = document.createElement('h3');
         questionSection.appendChild(qstion);
-        qstion.setAttribute('id','qHead');
+        qstion.setAttribute('id','qH');
         qstion.textContent = this.question[i];
-        const ansrSec = document.createElement('section');
-        questionSection.appendChild(ansrSec);
-        ansrSec.setAttribute('class','ansrsBox');
-        ansrSec.setAttribute('id','ansrSec');
-        for (let j = 0; j < answers.length; j++) {
-          const ansrDiv1 = document.createElement('div');
-          ansrSec.appendChild(ansrDiv1);
-          ansrDiv1.setAttribute('class','ansrBox');
-          const allBtns = document.createElement('button');
-          ansrDiv1.appendChild(allBtns);
-          allBtns.setAttribute('id', `ans-${j}`);
-          allBtns.setAttribute('type','button');
-          allBtns.setAttribute('class','allBtns');
-          allBtns.textContent= this.answers[j];
-          allBtns.click('Test.calcTotal(event)');
-        }
       }
     }
   };
-  Test.calcTotal = function(event){
-    event.preventDefault();
-    score = 0;
-    for (let i = 0; i < question.length; i++) {
-      for (let j = 0; j < answers.length; j++) {
-        if (document.getElementById(`ans-${j}`).click) {
-          score += 2;
-        } if (document.getElementById(`ans-${j}`).click) {
-          score += 1;
-        } if (document.getElementById(`ans-${j}`).click) {
-          score += 2;
-        } if (document.getElementById(`ans-${j}`).click) {
-          score += 3;
-        }
-      }
-    }
-    this.results();
-    console.log(score);
-    localStorage.setItem('score', JSON.stringify(score));
-    document.getElementById('qSec').style.display = 'block';
-  };
+
   Test.results = function(){
-    qForm.style.display = 'none';
+    qForm.hidden= true;
     const par = document.getElementById('res-par');
+    const ancur = document.createElement('a');
+    par.appendChild(ancur);
+    ancur.setAttribute('class', 'recomadedLink');
     par.className = 'bigger';
-    if (this.score >=0 && this.score <=4) {
+    if (this.score >=0 && this.score <=7) {
       par.textContent = 'Your results indicate that you have none, or very few symptoms of depression.';
-    } else if (this.score >=5 && this.score <=9) {
+      ancur.href = './entertainment.html';
+    } else if (this.score >=8 && this.score <=14) {
+      ancur.href = './travel.html';
       par.textContent = 'Your results indicate that you may be experiencing symptoms of mild depression. While your symptoms are not likely having a major impact on your life, it is important to monitor them.';
-    } else if (this.score >=10 && this.score <=14) {
+    } else if (this.score >=15 && this.score <=21) {
+      ancur.href = './game.html';
       par.textContent = 'Your results indicate that you may be experiencing symptoms of mild depression. While your symptoms are not likely having a major impact on your life, it is important to monitor them.';
-    } else if (this.score >=15 && this.score <=19) {
+    } else if (this.score >=22 && this.score <=27) {
+      ancur.href = './cooking.html';
       par.textContent = 'Your results indicate that you may be experiencing symptoms of moderately severe depression. Based on your answers, living with these symptoms is causing difficulty managing relationships and even the tasks of everyday life.';
-    } else if (this.score >=20 && this.score <=27) {
-      par.textContent = 'Your results indicate that you may be experiencing symptoms of severe depression. Based on your answers, these symptoms seem to be greatly interfering with your relationships and the tasks of everyday life.';
     }
   };
 }
-const ttt = new Test (qwsshn, ansrsArr, score);
+
+const ttt = new Test (qwsshn);
+
+function frst(e){
+  e.preventDefault();
+  score +=0;
+  let hhh = document.getElementsByClassName('allBtns');
+  hhh[0].disabled = true;
+  return score;
+}
+function scnd(e){
+  e.preventDefault();
+  score +=1;
+  let hhh = document.getElementsByClassName('allBtns');
+  hhh[1].disabled = true;
+  return score;
+}
+function thrd(e){
+  e.preventDefault();
+  score +=2;
+  let hhh = document.getElementsByClassName('allBtns');
+  hhh[2].disabled = true;
+  return score;
+}
+function forth(e){
+  e.preventDefault();
+  score +=3;
+  let hhh = document.getElementsByClassName('allBtns');
+  hhh[3].disabled = true;
+  return score;
+}
+
+localStorage.setItem('score', JSON.stringify(score));
+document.getElementById('qSec').style.display = 'block';
+// document.getElementById('questionBox').style.display = 'none';
+
