@@ -55,25 +55,13 @@ function render() {
     rightImage.alt = climb[rightIndex];
 
 
-    if (leftIndex === centerIndex || rightIndex === leftIndex || rightIndex === centerIndex) {
-        render()
-    }
+    // if (leftIndex === centerIndex || rightIndex === leftIndex || rightIndex === centerIndex) {
+    //     render()
+    // }
 
 }
 
-function updateList() {
-    let upList = JSON.stringify(Vote);
-    localStorage.setItem("PlaceVotes", upList);
-}
 
-
-function getList() {
-    let gList = localStorage.getItem("PlaceVotes");
-    if (gList) {
-        Vote = JSON.parse(gList);
-        render();
-    }
-}
 
 
 
@@ -108,6 +96,21 @@ function handleClick(event) {
         Vote.push(votes)
         render();
 
+        function updateList() {
+            let upList = JSON.stringify(Vote);
+            localStorage.setItem("PlaceVotes", upList);
+        }
+
+
+        function getList() {
+            let gList = localStorage.getItem("PlaceVotes");
+            if (gList) {
+                Vote = JSON.parse(gList);
+                render();
+            }
+        }
+        updateList()
+        getList()
         console.log(Vote)
     }
 
@@ -148,8 +151,7 @@ function wherTo() {
     }
 
 }
-updateList()
-getList()
+
 
 // function createChart() {
 //     const ctx = document.getElementById('myChart').getContext('2d');
