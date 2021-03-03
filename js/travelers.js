@@ -55,9 +55,9 @@ function render() {
     rightImage.alt = climb[rightIndex];
 
 
-    // if (leftIndex === centerIndex || rightIndex === leftIndex || rightIndex === centerIndex) {
-    //     render()
-    // }
+    if (leftIndex === centerIndex || rightIndex === leftIndex || rightIndex === centerIndex) {
+        render()
+    }
 
 }
 
