@@ -4,6 +4,7 @@ const foodForm = document.getElementById('food-Form');
 const orders = document.getElementById('orders');
 
 
+
 /*----------------constructer function---------------------------- */
 function Food(item, quantity) {
   this.item = item;
@@ -11,7 +12,6 @@ function Food(item, quantity) {
   Food.all.push(this);
   localStorage.setItem('orders', JSON.stringify(Food.all));
 }
-Food.all = [];
 
 /**----------------retrieve the obj into JS form----------------   */
 function retrieve() {
@@ -20,6 +20,7 @@ function retrieve() {
     renderOrder();
   }
 }
+Food.all = [];
 
 /**----------------eventFunction-------------------------------- */
 function handelTakeOrder(event) {
@@ -47,7 +48,7 @@ function renderOrder() {
       liEl.textContent = `Your Order : ${Food.all[i].quantity} of ${Food.all[i].item}`;
       preItem = Food.all[i].item;
     } else {
-      ulEl.removeChild(ulEl.lastElementChild);
+      ulEl.removeChild(ulEl.lastElementChild); // delet last li to add quantity to the same order by
       const liEl = document.createElement('li');
       ulEl.appendChild(liEl);
       preQuantity += Food.all[i].quantity;
@@ -61,7 +62,6 @@ function renderOrder() {
   }
   foodForm.reset();
 }
-
 
 function ViewCountry(country) {
   this.country = country;
