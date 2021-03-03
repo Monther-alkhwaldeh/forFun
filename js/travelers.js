@@ -112,6 +112,7 @@ function handleClick(event) {
         updateList()
         getList()
         console.log(Vote)
+        console.log('nothing to see')
     }
 
 }
