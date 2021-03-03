@@ -1,11 +1,28 @@
-.column {
-    float: left;
-    /* width: 33.33%; */
-    /* padding: 5px; */
-}
-
-.row::after {
-    content: "";
-    clear: both;
-    display: table;
-}
+        * {
+        box-sizing: border-box;
+    }
+    
+    .column {
+        float: left;
+        width: 20%;
+        padding: 10px;
+    }
+    
+    .row::after {
+        content: "";
+        clear: both;
+        display: table;
+        margin-left: 50px;
+        /* margin-right: auto; */
+    }
+    
+    h1 {
+        text-align: center;
+        /* margin-left: 180px; */
+    }
+    
+    p {
+        text-align: center;
+        /* margin-right: 20px;
+} */
+        .raw1 {}
