@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-.column {
-    width: 50%;
-    display: inline;
-
-    /* width: 33.33%; */
-    /* padding: 5px; */
-}
-
-.row::after {
-    content: "";
-    clear: both;
-    display: table;
-    width: 50%;
-    display: inline;
-}
-=======
   * {
       box-sizing: border-box;
   }
@@ -59,4 +42,3 @@
       border: #ffc293;
       border-style: outset;
   }
->>>>>>> main
