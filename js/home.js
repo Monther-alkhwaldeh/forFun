@@ -64,14 +64,13 @@ function Test (question, answers){
     score = 0;
     for (let i = 0; i < question.length; i++) {
       for (let j = 0; j < answers.length; j++) {
-        debugger;
-        if (document.getElementById(answers[j]).checked) {
+        if (document.getElementById(`ans-${j}`).click) {
           score += 2;
-        } if (document.getElementById(answers[j]).che) {
+        } if (document.getElementById(`ans-${j}`).click) {
           score += 1;
-        } if (document.getElementById(answers[j]).focus) {
+        } if (document.getElementById(`ans-${j}`).click) {
           score += 2;
-        } if (document.getElementById(answers[j]).focus) {
+        } if (document.getElementById(`ans-${j}`).click) {
           score += 3;
         }
       }

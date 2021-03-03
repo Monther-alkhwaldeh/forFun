@@ -61,19 +61,6 @@ function render() {
 
 }
 
-function updateList() {
-  let upList = JSON.stringify(Vote);
-  localStorage.setItem("PlaceVotes", upList);
-}
-
-
-function getList() {
-  let gList = localStorage.getItem("PlaceVotes");
-  if (gList) {
-    Vote = JSON.parse(gList);
-    render();
-  }
-}
 
 
 
@@ -94,15 +81,28 @@ function handleClick(event) {
         console.log(allAct.length);
         if (tmp.swim[i] === event.target.title || tmp.climb[i] === event.target.title || tmp.camp[i] === event.target.title) {
           tmp.votes++;
-          console.log("The votes are :" +
-                        tmp.votes);
+          console.log("The votes are :" + tmp.votes);
           Vote.push(tmp.votes);
-
-
         }
-
       }
 
+      function updateList() {
+        let upList = JSON.stringify(Vote);
+        localStorage.setItem("PlaceVotes", upList);
+      }
+
+
+      function getList() {
+        let gList = localStorage.getItem("PlaceVotes");
+        if (gList) {
+          Vote = JSON.parse(gList);
+          render();
+        }
+      }
+      updateList();
+      getList();
+      console.log(Vote);
+      console.log('nothing to see');
     }
 
     Vote.push(votes);
@@ -148,5 +148,3 @@ function wherTo() {
   }
 
 }
-updateList();
-getList();
