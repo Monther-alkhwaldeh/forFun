@@ -148,7 +148,10 @@ body {
     left: 1%;
     line-height: 30px;
     font-size: 20px;
-}
+    padding-top: 0%;
+    padding: 2%;
+    border: 3px solid rgba(0,0,0,0.16);
+      box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);}
 .hImg {
     width: 45%;
     position: relative;
