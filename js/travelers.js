@@ -114,8 +114,6 @@ function handleClick(event) {
 
       }
 
-<<<<<<< HEAD
-=======
         function updateList() {
             let upList = JSON.stringify(Vote);
             localStorage.setItem("PlaceVotes", upList);
@@ -133,7 +131,6 @@ function handleClick(event) {
         getList()
         console.log(Vote)
         console.log('nothing to see')
->>>>>>> main
     }
 
     Vote.push(votes);
@@ -178,7 +175,6 @@ function wherTo() {
     alert('traveling Make you see what you have never seen before!!');
   }
 
-<<<<<<< HEAD
 }
 // updateList();
 // getList();
@@ -277,6 +273,3 @@ retrieve();
 //         options: {},
 //     });
 // };
-=======
-}
->>>>>>> main
