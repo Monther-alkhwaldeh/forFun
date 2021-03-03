@@ -28,8 +28,9 @@ for (let i = 0; i < videoName.length; i++) {
 // ------------------display Videos----------------------
 function rendervideos() {
   const h3 = document.createElement('h3');
+  h3.id = 'h3';
   container.appendChild(h3);
-  h3.textContent = 'Please watch this videos';
+  h3.textContent = 'Please watch These videos';
   for (let i = 0; i < Videos.all.length; i++) {
     const fVideo = document.createElement('video');
     container.appendChild(fVideo);
@@ -56,13 +57,15 @@ for (let i = 0; i < audioName.length; i++) {
 function audioRender() {
   const h3 = document.createElement('h3');
   audioContainer.appendChild(h3);
-  h3.textContent = 'Please play One Of The Audio Clip';
+  h3.setAttribute('id', 'audioId');
+  h3.textContent = 'Please play These  Audio Clip';
   for (let i = 0; i < AudioC.all.length; i++) {
     const audioC = document.createElement('audio');
     audioContainer.appendChild(audioC);
     audioC.setAttribute('controls', 'controls');
     audioC.setAttribute('width', '300');
     audioC.setAttribute('height', '200');
+    audioC.setAttribute('id', 'audioS');
     audioC.src = AudioC.all[i].path;
   }
 }
@@ -87,8 +90,10 @@ function rateRender() {
   for (let i = 0; i < UserRate.all.length; i++) {
     rateU.innerHTML = '';
     const rateLi = document.createElement('li');
+    rateLi.setAttribute('id', 'lie1');
     rateU.appendChild(rateLi);
     rateLi.textContent = ` Thank You ${UserRate.all[i].nameU} And your rate is : ${UserRate.all[i].rateN}`;
+
   }
 }
 // -----------retrive local storage --------------------------
@@ -99,7 +104,6 @@ function retriverate() {
   }
 }
 
-retriverate();
 
 
 // ---------submit button----------------------------------
@@ -116,6 +120,7 @@ function submitB(event) {
 
 }
 formp.addEventListener('submit', submitB);
+retriverate();
 rateRender();
 
 
