@@ -2,7 +2,6 @@
 
 const container = document.getElementById('videos');
 const audioContainer = document.getElementById('audioClip');
-const formp = document.getElementById('forms');
 
 const videoName = ['b3', 'bb2', 'fff'];
 const ext = ['mp4', 'mp4', 'mp4'];
@@ -79,13 +78,15 @@ function UserRate(nameU, rateN) {
   UserRate.all.push(this);
   localStorage.setItem('userrate', JSON.stringify(UserRate.all));
 }
+// -----------retrive local storage --------------------------
+
+
 UserRate.all = [];
 // --------------rate Render---------------------------
 function rateRender() {
   const divC = document.getElementById('userRate');
   const rateU = document.createElement('ul');
   divC.appendChild(rateU);
-
 
   for (let i = 0; i < UserRate.all.length; i++) {
     rateU.innerHTML = '';
@@ -96,20 +97,15 @@ function rateRender() {
 
   }
 }
-// -----------retrive local storage --------------------------
 function retriverate() {
-  if (localStorage > 0) {
-    UserRate.all = localStorage.getItem('userrate');
+  if (localStorage.length > 0) {
+    UserRate.all =JSON.parse(localStorage.getItem('userrate'));
     rateRender();
   }
 }
-
-
-
-// ---------submit button----------------------------------
-
+// ---------form----------------------------------
+const formp=document.getElementById('forms');
 function submitB(event) {
-
   event.preventDefault();
   const nameU = event.target.name.value;
   const rateN = parseFloat(event.target.ratenumber.value);
@@ -117,10 +113,9 @@ function submitB(event) {
   event.target.reset();
   rateRender();
 
-
 }
 formp.addEventListener('submit', submitB);
-retriverate();
 rateRender();
+retriverate();
 
 
