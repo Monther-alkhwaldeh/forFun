@@ -1,6 +1,6 @@
 
 .mainBox{
-  background-color:;
+  background-color:lightblue;
 }
 
 .para{
@@ -16,7 +16,6 @@ margin-top: 0%;
     flex-direction: column;
     height: 200px;
     width: 400px;
-    /* background: #333; */
     margin-left: 30%;
   }
   
@@ -95,7 +94,7 @@ margin-top: 0%;
       transform: translateX(-0%);
     }
   }
-  
+ 
   #ratingV{
     margin-top: 30%;
     margin-left: 30%;
@@ -108,6 +107,15 @@ margin-top: 0%;
     font-size: 200%;
 
   }
+.mainBox1{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: lightblue;
+  padding: 1%;
+  margin-top: 5%;
+  
+}
 
 #audioId{
 text-align: center;
@@ -117,23 +125,21 @@ font-family: 'Indie Flower', cursive;
 }
   #fVideos{
     padding: 2%;
-  border: 1px solid #ccc;
+  border: 3px solid rgba(0,0,0,0.16);
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     
   }
 
   #audioS{
     padding: 2%;
-  border: 1px solid #ccc;
+  border: 3px solid rgba(0,0,0,0.16);
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     border-radius: 50%;
-  flex-grow: 0;
   }
 
   #userRate{
     border: 5px outset rgba(0,0,0,0.16);
   background-color: lightblue;
-  /* align-items: center; */
   text-align: center;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   }
@@ -145,7 +151,6 @@ font-family: 'Indie Flower', cursive;
     font-size: 150%;
     }
     #bSubmit{
-      /* width: 15%; */
     text-decoration: none;
     border: 2px solid #08282fb7;
     transition: all 0.5s ease;
@@ -153,7 +158,6 @@ font-family: 'Indie Flower', cursive;
     padding: 5px;
     position: relative;
     float: right;
-    /* top: -100px; */
     right: 10%;
     top: 10%;
     letter-spacing: 3px;
@@ -163,13 +167,3 @@ font-family: 'Indie Flower', cursive;
       background-color: #142a72dc;
     color: #d1dabb;
     }
-
-  /* #nameP{
-    float: left;
-  } */
-  /* #name{
-float: left;  
-}
-#ratenumber{
-  float: left;
-} */
