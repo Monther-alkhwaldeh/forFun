@@ -1,7 +1,23 @@
 
-.para {
+.paraCook  {
     text-align: center;
-    width: 90%;
+    width: 80%;
+    margin-left: 3.8cm;
+    
+}
+
+.p1 {
+    font-size: x-large;
+}
+
+.p2 {
+    line-height: 2;
+    background-color: #80c2b462;
+    padding: 10px;
+    letter-spacing: 1.5px;
+    word-spacing: 3px;
+    
+
 }
 
 
