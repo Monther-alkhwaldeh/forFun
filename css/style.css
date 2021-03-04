@@ -5,18 +5,17 @@
 body {
     padding: 0px;
     margin: 0px;
-    color: #08282f;
+    color: #05181d;
     background-color: #e8dfd8;
     background-repeat: repeat-x;
     background-size: cover;
 }
 
-
 /***************************************************header section*************************************************/
 
 .navBar {
     width: 100%;
-    height: 75px;
+    height: 90px;
     background-color: #9dddcd;
     box-shadow: 0px 0px 10px #3b3d3de7;
 }
@@ -25,20 +24,19 @@ body {
     width: 3%;
     padding: 0.5%;
     position: relative;
-    left: 4%;
+    left: 5%;
 }
 
 .navBar h1 {
     position: relative;
     float: left;
     left: 15%;
-    top: -5%;
+    top: 5%;
 }
 
 .animated {
     animation: spin 3s linear infinite;
 }
-
 @keyframes spin {
     0% {
         transform: rotatex(0deg);
@@ -57,22 +55,20 @@ body {
         transform: rotatex(0deg);
     }
 }
-
 .ull {
     list-style-type: none;
     margin: 0;
     padding: 0;
     position: relative;
     float: right;
-    width: 50%;
+    width: 20%;
     top: 40%;
+    right: 5%;
 }
-
 .ull li {
     display: inline;
-    padding: 2%;
+    padding: 5%;
 }
-
 .ull li a {
     color: #08282f;
     font-weight: bold;
@@ -80,7 +76,6 @@ body {
     text-decoration: none;
     cursor: pointer;
 }
-
 .dropdwn-con {
     display: none;
     position: absolute;
@@ -88,11 +83,10 @@ body {
     min-width: 100px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     z-index: 1;
-    margin: 0px;
+    margin-top: 2%;
     padding: 0px;
     left: 80px;
 }
-
 .dropdwn-con a {
     float: none;
     color: #08282f;
@@ -101,16 +95,21 @@ body {
     display: block;
     text-align: left;
 }
-
 .dropdwn-con a:hover {
     background-color: #9dddcdb4;
 }
-
 .drop:hover .dropdwn-con {
     display: block;
 }
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.sticky + .mainBox {
+    padding-top: 60px;
+}
 /************************************************mainBox section*************************************************/
-
 .mainBox {
     width: 80%;
     margin-left: auto;
@@ -119,7 +118,6 @@ body {
     padding: 1%;
     margin-top: 5%;
 }
-
 .mainBox .otherBox {
     width: 80%;
     margin-left: auto;
@@ -128,7 +126,6 @@ body {
     padding: 1%;
     margin-top: 5%;
 }
-
 .para {
     width: 45%;
     position: relative;
@@ -136,18 +133,15 @@ body {
     line-height: 30px;
     font-size: 20px;
 }
-
 .hImg {
     width: 45%;
     position: relative;
     float: right;
     top: -320px;
 }
-
 .hImg img {
     height: 300px;
 }
-
 .start-btn {
     width: 15%;
     text-decoration: none;
@@ -162,55 +156,41 @@ body {
     letter-spacing: 3px;
     text-transform: uppercase;
 }
-
+.no-other{
+    top: -75px;
+    right: 0%;
+    position: sticky;
+}
 .start-btn:hover {
     background-color: #08282fb7;
     color: #c2d78a;
 }
-
-
+#scorSpan{
+    font-size: 25px;
+    top: -80px;
+    position: relative;
+    left: 30%;
+}
+#res-par{
+    font-size: 25px;
+}
+.recomadedLink {
+    font-size: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #05181d;
+}
 /***************************************************footer section*************************************************/
-
 .footr {
     width: 100%;
     height: 50px;
     position: relative;
-    bottom: 0px;
+    bottom: -200px;
     background-color: #80c2b498;
     text-align: center;
     padding-top: 1%;
     box-shadow: 0px 0px 10px #3b3d3de7;
 }
-
-
-/**********************************game styling***********************************************/
-
-#match-grid {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    padding: 10px;
-    perspective: 600px;
-}
-
-#match-grid .card-container {
-    width: 100px;
-    height: 100px;
-    border: 1px solid black;
-    margin: 10px;
-    position: relative;
-    transition: transform 1s;
-    transform-style: preserve-3d;
-}
-
-#match-grid .card-container>.card_back {
-    transition: box-shadow 0.3s;
-}
-
-#match-grid .card-container.matched>.card_back {
-    box-shadow: inset 0 0 5px 5px forestgreen;
-}
-
 
 /* -------------------quiz section----------------------------- */
 
@@ -219,33 +199,60 @@ body {
 }
 
 .quesBox {
-    width: 80%;
+    width: 75%;
     margin-left: auto;
     margin-right: auto;
     background-color: #9dddcdcc;
-    padding: 1%;
+    padding: 2%;
     margin-top: 1%;
     transition: 1s ease;
 }
 
 .quesBox:hover {
     box-shadow: 0px 0px 5px #3d4446e7;
-    transform: scale(1.02);
+    background-color: #a2e4c0af;
 }
 
 #qHead {
     padding: 1%;
 }
-
-#rad {
-    transition: all 0.5s ease;
-    padding: 2%;
+.ansrBox{
+    width: 90%;
+    padding: 0.5%;
+    margin-left: auto;
+    margin-right: -4%;
 }
-
-#rad:hover {
-    transform: scale(1.5);
+.allBtns{
+    width: 40%;
+    padding: 10px;
+    background-color: #ffffff4d;
+    border-radius: 5px;
+    border: 2px solid #08282f;
+    color: #08282f;
+    margin: 1%;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 1s ease;
 }
-
-#radLabl {
-    padding: 1%;
+.allBtns:hover{
+    background-color: #80c2b494;
+    color: #08282f;
+    box-shadow: 0px 0px 5px #282d2ee7;
+}
+.res-btn{
+    width: 100%;
+    padding: 10px;
+    background-color: #ffffff4d;
+    border-radius: 5px;
+    border: 2px solid #08282f;
+    color: #08282f;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 1s ease;
+}
+.res-btn:hover {
+    background-color: #80c2b494;
+    color: #08282f;
+    box-shadow: 0px 0px 5px #282d2ee7;
+    transform: scale(1.02);
 }

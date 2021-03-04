@@ -11,18 +11,25 @@ let qwsshn= ['Difficulty focusing on everyday tasks'
   , 'Considering harming yourself, or committing suicide'
   , 'If you have had any days with issues above, how difficult have these problems made it for you at work, home, school, or with other people?'];
 
-const qForm = document.getElementById('showquiz');
-const quesBox = document.getElementsByClassName('quesBox');
-for (let i = 0; i < quesBox.length; i++) {
-  quesBox[i].style.display = 'none';
+var navBar = document.getElementById('navBar');
+var sticky = navBar.offsetTop;
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navBar.classList.add('sticky');
+  } else {
+    navBar.classList.remove('sticky');
+  }
 }
 let score = 0;
-function swich(){
-  document.getElementById('qSec').style.display = 'none';
-  qForm.hidden = false;
-  ttt.quesFlag = true;
-  ttt.renderQ();
+const qForm = document.getElementById('showquiz');
+const quesBox = document.getElementsByClassName('quesBox');
+
+
+for (let i = 0; i < quesBox.length; i++) {
+  quesBox[i].style.display = 'none';
+  quesBox[i].id = `b-${quesBox[i]}`;
 }
+
 function Test (question){
   this.question = question;
   this.quesFlag = false;
@@ -37,62 +44,82 @@ function Test (question){
       }
     }
   };
-
   Test.results = function(){
-    qForm.hidden= true;
     const par = document.getElementById('res-par');
+    const reco = document.getElementById('recommandiation');
+    const scorSpan = document.getElementById('scorSpan');
     const ancur = document.createElement('a');
-    par.appendChild(ancur);
+    reco.appendChild(ancur);
     ancur.setAttribute('class', 'recomadedLink');
     par.className = 'bigger';
-    if (this.score >=0 && this.score <=7) {
-      par.textContent = 'Your results indicate that you have none, or very few symptoms of depression.';
+    if (score >=0 && score <=7) {
+      par.textContent = `Your results indicate that you have none, or very few symptoms of depression. we recomand to visit: your score is:  ${score}/27`;
       ancur.href = './entertainment.html';
-    } else if (this.score >=8 && this.score <=14) {
+      ancur.textContent = 'entertainment';
+    } else if (score >=8 && score <=14) {
       ancur.href = './travel.html';
-      par.textContent = 'Your results indicate that you may be experiencing symptoms of mild depression. While your symptoms are not likely having a major impact on your life, it is important to monitor them.';
-    } else if (this.score >=15 && this.score <=21) {
+      ancur.textContent = 'travel';
+      par.textContent = `Your results indicate that you may be experiencing symptoms of mild depression. While your symptoms are not likely having a major impact on your life, it is important to monitor them. your score is:  ${score}/27`;
+    } else if (score >=15 && score <=21) {
       ancur.href = './game.html';
-      par.textContent = 'Your results indicate that you may be experiencing symptoms of mild depression. While your symptoms are not likely having a major impact on your life, it is important to monitor them.';
-    } else if (this.score >=22 && this.score <=27) {
+      ancur.textContent = 'games';
+      par.textContent = `Your results indicate that you may be experiencing symptoms of mild depression. While your symptoms are not likely having a major impact on your life, it is important to monitor them.your score is:  ${score}/27`;
+    } else if (score >=22 && score <=27) {
       ancur.href = './cooking.html';
-      par.textContent = 'Your results indicate that you may be experiencing symptoms of moderately severe depression. Based on your answers, living with these symptoms is causing difficulty managing relationships and even the tasks of everyday life.';
+      ancur.textContent = 'cooking';
+      par.textContent = `Your results indicate that you may be experiencing symptoms of moderately severe depression. Based on your answers, living with these symptoms is causing difficulty managing relationships and even the tasks of everyday life.your score is:  ${score}/27`;
     }
   };
 }
 
 const ttt = new Test (qwsshn);
 
+function swich(){
+  document.getElementById('qSec').style.display = 'none';
+  for (let i = 0; i < quesBox.length; i++) {
+    quesBox[i].style.display = 'block';
+  }
+  qForm.hidden = false;
+  ttt.quesFlag = true;
+  ttt.renderQ();
+}
+
 function frst(e){
   e.preventDefault();
   score +=0;
-  let hhh = document.getElementsByClassName('allBtns');
-  hhh[0].disabled = true;
+  localStorage.setItem('score', JSON.stringify(score));
   return score;
 }
 function scnd(e){
   e.preventDefault();
   score +=1;
-  let hhh = document.getElementsByClassName('allBtns');
-  hhh[1].disabled = true;
+  localStorage.setItem('score', JSON.stringify(score));
   return score;
 }
 function thrd(e){
   e.preventDefault();
   score +=2;
-  let hhh = document.getElementsByClassName('allBtns');
-  hhh[2].disabled = true;
+  localStorage.setItem('score', JSON.stringify(score));
   return score;
 }
 function forth(e){
   e.preventDefault();
   score +=3;
-  let hhh = document.getElementsByClassName('allBtns');
-  hhh[3].disabled = true;
+  localStorage.setItem('score', JSON.stringify(score));
   return score;
 }
 
 localStorage.setItem('score', JSON.stringify(score));
 document.getElementById('qSec').style.display = 'block';
-// document.getElementById('questionBox').style.display = 'none';
-
+const resBtn = document.getElementById('res-btn');
+resBtn.textContent = 'Result';
+function getResult(e){
+  e.preventDefault();
+  document.getElementById('qSec').style.display = 'block';
+  for (let i = 0; i < quesBox.length; i++) {
+    quesBox[i].style.display = 'none';
+    quesBox[i].id = `b-${quesBox[i]}`;
+  }
+  Test.results();
+  localStorage.getItem('score');
+}

@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <header class="navBar">
+    <header class="navBar" id="navBar">
         <img src="./imgs/logo.png" alt="logo" class="logo" onclick="">
         <h1>M<span class="animated">oo</span>der</h1>
         <ul class="ull">
@@ -45,16 +45,14 @@
         </section>
     </section>
     <section class="mainBox otherBox" id="qSec">
-        <section class="">
+        <section class="" id="recommandiation">
             <h3> &#128519; mood converter quiz &#128519;</h3>
             <p id="res-par"> I'm not a normal quiz I'm &#9748;a storm &#9748; of happiness, come and join my storm
             </p>
         </section>
-        <button onclick="swich();" class="start-btn" id="showbutton">start</button>
+        <button onclick="swich();" class="start-btn no-other" id="showbutton">start</button>
     </section>
     <section class="quiz-box otherBox" id="showquiz">
-        <p id="question"></p>
-    <section class="qbox" id="showquiz">  
         <section class="quesBox" id="questionBox" >
             <section class="qHead" id="qHead-0"></section>
             <div class="ansrBox" id="ansrBox-0">
@@ -145,7 +143,9 @@
                 <button class="allBtns" type="button" onclick="forth(event)">Nearly all the time</button>
             </div>
         </section>
-    </section>
+        <section class="quesBox res-box" id="questionBox" >
+            <button class="res-btn" id="res-btn" onclick="getResult(event)"></button>
+        </section>
     </section>
     <footer class="footr" id="footr">
         The Mood Converter
