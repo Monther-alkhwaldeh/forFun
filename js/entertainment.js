@@ -34,8 +34,8 @@ function rendervideos() {
     const fVideo = document.createElement('video');
     container.appendChild(fVideo);
     fVideo.setAttribute('controls', 'controls');
-    fVideo.setAttribute('width', '300');
-    fVideo.setAttribute('height', '200');
+    fVideo.setAttribute('width', '400');
+    fVideo.setAttribute('height', '350');
     fVideo.setAttribute('id', 'fVideos');
     fVideo.src = Videos.all[i].path;
 

@@ -1,6 +1,6 @@
 
 .mainBox{
-  background-color:lightblue;
+  background-color:#a2e4c07575;
 }
 
 .para{
@@ -10,108 +10,108 @@ margin-left: 25%;
 padding-top: 0%;
 }
 .container {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-direction: column;
-    height: 200px;
-    width: 400px;
-    margin-left: 30%;
-  }
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  height: 200px;
+  width: 400px;
+  margin-left: 30%;
+}
   
-  h1 {
-    text-align: center;
-  }
+h1 {
+  text-align: center;
+}
+
+.animation {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 50px;
+  letter-spacing: 1px;
+  color: #fff;
+  display: inline-block;
+  animation: fadeIn 1.5s forwards;
+  opacity: 0;
+  transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
   
-  .animation {
-    text-align: center;
-    text-transform: uppercase;
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: 50px;
-    letter-spacing: 1px;
-    color: #fff;
-    display: inline-block;
-    animation: fadeIn 1.5s forwards;
+.first {
+  display: inline-block;
+  animation: firstSpan 1.5s forwards cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  background: #333;
+  z-index: 1;
+  position: relative;
+}
+
+.oh {
+  display: inline-flex;
+  overflow: hidden;
+}
+
+.second {
+  animation: secondSpan 1.5s forwards cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  font-weight: 100;
+  z-index: -1;
+  display: inline-block;
+}
+  
+@keyframes fadeIn {
+  0% {
     opacity: 0;
-    transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    transform: scale(1);
+  } 
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
   }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
   
-  .first {
-    display: inline-block;
-    animation: firstSpan 1.5s forwards cubic-bezier(0.785, 0.135, 0.15, 0.86);
-    background: #333;
-    z-index: 1;
-    position: relative;
+@keyframes firstSpan {
+  0% {
+    transform: translateX(50%);
   }
+  60% {
+    transform: translateX(50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
   
-  .oh {
-    display: inline-flex;
-    overflow: hidden;
+@keyframes secondSpan {
+  0% {
+    transform: translateX(-100%);
   }
-  
-  .second {
-    animation: secondSpan 1.5s forwards cubic-bezier(0.785, 0.135, 0.15, 0.86);
-    font-weight: 100;
-    z-index: -1;
-    display: inline-block;
+  60% {
+    transform: translateX(-100%);
   }
-  
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-      transform: scale(1);
-    } 
-    50% {
-      opacity: 1;
-      transform: scale(1.1);
-    }
-    100% {
-      transform: scale(1);
-      opacity: 1;
-    }
+  100% {
+    transform: translateX(-0%);
   }
-  
-  @keyframes firstSpan {
-    0% {
-      transform: translateX(50%);
-    }
-    60% {
-      transform: translateX(50%);
-    }
-    100% {
-      transform: translateX(0%);
-    }
-  }
-  
-  @keyframes secondSpan {
-    0% {
-      transform: translateX(-100%);
-    }
-    60% {
-      transform: translateX(-100%);
-    }
-    100% {
-      transform: translateX(-0%);
-    }
-  }
- 
-  #ratingV{
-    margin-top: 30%;
-    margin-left: 30%;
-  }
+}
 
-  #h3{
-    text-align: center;
-    font-family: 'Indie Flower', cursive;
-    font-family: 'Lobster', cursive;
-    font-size: 200%;
+#ratingV{
+  margin-top: 30%;
+  margin-left: 30%;
+}
 
-  }
+#h3{
+  text-align: center;
+  font-family: 'Indie Flower', cursive;
+  font-family: 'Lobster', cursive;
+  font-size: 200%;
+
+}
 .mainBox1{
   width: 80%;
   margin-left: auto;
   margin-right: auto;
-  background-color: lightblue;
+  background-color: #a2e4c075;
   padding: 1%;
   margin-top: 5%;
   
@@ -127,59 +127,63 @@ font-family: 'Indie Flower', cursive;
     font-family: 'Lobster', cursive;
     font-size: 200%;
 }
-  #fVideos{
-    position: relative;
-    padding: 2%;
-  border: 3px solid rgba(0,0,0,0.16);
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-    
-  }
+#fVideos{
+  position: relative;
+  padding: 1%;
+  border: 2px solid rgba(42, 41, 41, 0.16);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);   
+}
  
 
-  #audioS{
-    border: 5px outset rgba(0,0,0,0.16);
-    padding: 2%;
-  /* border: 3px solid rgba(0,0,0,0.16); */
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-    border-radius: 50%;
+#audioS{
+  border: 2px outset rgba(0,0,0,0.16);
+  padding: 5%;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  border-radius: 10px;
+}
 
-  }
-
-  #userRate{
-    border: 5px outset rgba(0,0,0,0.16);
-  background-color: lightblue;
+#userRate{
+  border: 5px outset rgba(0,0,0,0.16);
+  background-color: #a2e4c075;
   text-align: center;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-  }
-  #lie1{
-    text-decoration: none;
-    display: inline-block;
-    font-family: 'Indie Flower', cursive;
-    font-family: 'Lobster', cursive;
-    font-size: 150%;
-    }
-    .bSubmit{
-      border: 2px solid #08282fb7;
-      padding: 10px;
-      width: 15%;
-      color: #141313;
-      font-size: 20px;
-      transition: 1s ease;
-      text-decoration: none;
-      display: inline-block;
-      margin: 4px 2px;
-      cursor: pointer; 
-      border-radius: 5px;
-      position: relative;
-      right: -3%;
-      top: 40%;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-    }
-    .bSubmit:hover{
-      border: 2px solid #08282fb7;
-    font-size: 20px;
-    transform: scale(1.1);
-    color: #C2D78A;
-    background-color: #08282fb7;
-    }
+}
+#lie1{
+  text-decoration: none;
+  display: inline-block;
+  font-family: 'Indie Flower', cursive;
+  font-family: 'Lobster', cursive;
+  font-size: 150%;
+}
+.bSubmit{
+  border: 2px solid #08282fb7;
+  padding: 10px;
+  width: 15%;
+  color: #141313;
+  font-size: 20px;
+  transition: 1s ease;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer; 
+  border-radius: 5px;
+  position: relative;
+  right: -3%;
+  top: 40%;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.bSubmit:hover{
+  border: 2px solid #08282fb7;
+  font-size: 20px;
+  transform: scale(1.1);
+  color: #C2D78A;
+  background-color: #08282fb7;
+}
+
+#fVideos, #audioS{
+  margin-left: auto;
+  margin-right: auto;
+  margin: 1%;
+  position: relative;
+}
